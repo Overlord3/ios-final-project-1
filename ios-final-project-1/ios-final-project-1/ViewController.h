@@ -8,9 +8,10 @@
 
 
 #import <UIKit/UIKit.h>
+#import "NetworkServiceProtocol.h"
 
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<NetworkServiceOutputProtocol>
 
 
 @end

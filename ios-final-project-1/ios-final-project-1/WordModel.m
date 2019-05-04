@@ -12,4 +12,13 @@
 
 @implementation WordModel
 
+- (instancetype)init
+{
+	self = [super init];
+	if (self) {
+		_definitions = [NSMutableArray new];
+	}
+	return self;
+}
+
 @end

@@ -10,12 +10,15 @@
 #import "ViewController.h"
 #import "NetworkService.h"
 #import "NotificationService.h"
+#import "DefinitionTableViewCell.h"
 
 
-@interface ViewController () <UISearchBarDelegate, UITableViewDataSource>
+@interface ViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) DefinitionTableViewCell *testCell; /**< Ячейка для измерения размера */
 @property (nonatomic, strong) UISearchBar *searchBar;
+
 
 @property (nonatomic, strong) WordModel *wordModel; /**< Слово с определениями для отображения */
 
@@ -34,7 +37,10 @@
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
 	
+
+	[self prepareModels];
 	[self prepareUI];
+	[self.tableView registerClass:DefinitionTableViewCell.class forCellReuseIdentifier:DefinitionTableViewCell.description];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -43,6 +49,12 @@
 	self.title = @"Поиск определений слов";
 }
 
+- (void)prepareModels
+{
+	self.networkService = [NetworkService initService];
+	self.networkService.outputDelegate = self;
+	self.testCell = [DefinitionTableViewCell new];
+}
 
 - (void)prepareUI
 {
@@ -61,7 +73,8 @@
 
 	
 	self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.searchBar.frame), screenWidth, screenHeight - searchBarHeight) style:UITableViewStylePlain];
-	
+	self.tableView.dataSource = self;
+	self.tableView.delegate = self;
 	
 	[self.view addSubview:self.tableView];
 }
@@ -105,8 +118,36 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+	DefinitionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:DefinitionTableViewCell.description forIndexPath:indexPath];
 	
-	return [UITableViewCell new];
+	DefinitionModel *model = self.wordModel.definitions[indexPath.row];
+	
+	cell.definitionLabel.text = [model getDefinition];
+	cell.exampleLabel.text = [model getExample];
+	cell.authorLabel.text = [model getAuthor];
+	cell.dateLabel.text = [model getDate].description;
+	
+	return cell;
+}
+
+#pragma UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	DefinitionModel *model = self.wordModel.definitions[indexPath.row];
+	CGFloat height = [DefinitionTableViewCell
+					  calculateHeightWithDefinition:[model getDefinition]
+					  example:[model getExample]
+					  author:[model getAuthor]
+					  date:[model getDate].description];
+	return height;
+}
+
+
+- (void)searchingFinishedWithWord:(WordModel *)word
+{
+	self.wordModel = word;
+	[self.tableView reloadData];
 }
 
 @end
