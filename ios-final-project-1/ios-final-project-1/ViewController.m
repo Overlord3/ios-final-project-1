@@ -36,8 +36,6 @@
 {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
-	
-
 	[self prepareModels];
 	[self prepareUI];
 	[self.tableView registerClass:DefinitionTableViewCell.class forCellReuseIdentifier:DefinitionTableViewCell.description];
@@ -70,7 +68,6 @@
 	[self.searchBar setPlaceholder:@"Введите слово для поиска (англ.)"];
 	self.searchBar.delegate = self;
 	[self.view addSubview:self.searchBar];
-
 	
 	self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.searchBar.frame), screenWidth, screenHeight - searchBarHeight) style:UITableViewStylePlain];
 	self.tableView.dataSource = self;
@@ -104,6 +101,7 @@
 	[self.networkService searchDefinitionsForString:searchBar.text];
 }
 
+
 #pragma UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -129,6 +127,7 @@
 	
 	return cell;
 }
+
 
 #pragma UITableViewDelegate
 

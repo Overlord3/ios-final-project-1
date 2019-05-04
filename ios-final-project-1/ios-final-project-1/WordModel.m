@@ -12,10 +12,17 @@
 
 @implementation WordModel
 
+/**
+ Инициализатор для модели слова
+ Инициализирует массив определений
+ 
+ @return экземпляр класса
+ */
 - (instancetype)init
 {
 	self = [super init];
-	if (self) {
+	if (self)
+	{
 		_definitions = [NSMutableArray new];
 	}
 	return self;

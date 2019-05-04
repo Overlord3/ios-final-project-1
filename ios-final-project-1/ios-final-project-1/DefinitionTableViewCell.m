@@ -23,16 +23,6 @@
 	return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-	self = [super initWithFrame:frame];
-	if (self)
-	{
-
-	}
-	return self;
-}
-
 - (void)layoutSubviews
 {
 	//Всего высота -

@@ -24,8 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (CGFloat)calculateHeightWithDefinition:(NSString *)definition example:(NSString *)example author:(NSString *)author date:(NSString *)date;
 
-- (CGFloat)getCellHeight;
-
 @end
 
 NS_ASSUME_NONNULL_END

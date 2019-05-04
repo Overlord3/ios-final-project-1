@@ -17,9 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WordModel : NSObject
 
 @property (nonatomic,strong)NSString *word; /**< Основное слово */
-@property (nonatomic,strong)NSMutableArray<DefinitionModel *> *definitions; /**< Массив определений слова */
-
-
+@property (nonatomic,strong)NSMutableArray<DefinitionModel *> *definitions; /**< Массив определений для слова */
 
 @end
 
