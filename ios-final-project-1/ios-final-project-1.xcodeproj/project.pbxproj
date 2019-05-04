@@ -19,6 +19,7 @@
 		FAC416DF227C8686006F4110 /* DefinitionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416DE227C8686006F4110 /* DefinitionModel.m */; };
 		FAC416E2227C9658006F4110 /* WordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416E1227C9658006F4110 /* WordModel.m */; };
 		FAC416E5227CB7F2006F4110 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416E4227CB7F2006F4110 /* NotificationService.m */; };
+		FAEFE5E1227DD75F0026FDCE /* DefinitionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5E0227DD75F0026FDCE /* DefinitionTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		FAC416E1227C9658006F4110 /* WordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordModel.m; sourceTree = "<group>"; };
 		FAC416E3227CB7F2006F4110 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
 		FAC416E4227CB7F2006F4110 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		FAEFE5DF227DD75F0026FDCE /* DefinitionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefinitionTableViewCell.h; sourceTree = "<group>"; };
+		FAEFE5E0227DD75F0026FDCE /* DefinitionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefinitionTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,7 @@
 		FAC416D4227C827F006F4110 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FAEFE5DE227DD6630026FDCE /* TableViewCell */,
 				FAC416A2227C7EB7006F4110 /* ViewController.h */,
 				FAC416A3227C7EB7006F4110 /* ViewController.m */,
 			);
@@ -176,6 +180,15 @@
 				FAC416DE227C8686006F4110 /* DefinitionModel.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		FAEFE5DE227DD6630026FDCE /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAEFE5DF227DD75F0026FDCE /* DefinitionTableViewCell.h */,
+				FAEFE5E0227DD75F0026FDCE /* DefinitionTableViewCell.m */,
+			);
+			name = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +324,7 @@
 				FAC416AA227C7EB7006F4110 /* ios_final_project_1.xcdatamodeld in Sources */,
 				FAC416DF227C8686006F4110 /* DefinitionModel.m in Sources */,
 				FAC416A4227C7EB7006F4110 /* ViewController.m in Sources */,
+				FAEFE5E1227DD75F0026FDCE /* DefinitionTableViewCell.m in Sources */,
 				FAC416E2227C9658006F4110 /* WordModel.m in Sources */,
 				FAC416B2227C7EB8006F4110 /* main.m in Sources */,
 				FAC416A1227C7EB7006F4110 /* AppDelegate.m in Sources */,
