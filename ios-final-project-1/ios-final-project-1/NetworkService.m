@@ -70,10 +70,15 @@
 		
 		for(NSDictionary *dict in definitions)
 		{
-			NSLog(@"%@",dict.description);
 			NSString *definitionString = dict[@"definition"];
-			NSString *authorString = dict[@"auhtor"];
+			definitionString = [self replaceBracketsInString:definitionString];
+			
+			NSString *authorString = dict[@"author"];
+			authorString = [self replaceBracketsInString:authorString];
+			
 			NSString *exampleString = dict[@"example"];
+			exampleString = [self replaceBracketsInString:exampleString];
+			
 			//Получаем дату, используем форматтер
 			//"written_on": "2012-07-19T00:00:00.000Z",
 			NSString *dateString = dict[@"written_on"];
@@ -98,6 +103,14 @@
 		});
 	}];
 	[sessionDataTask resume];
+}
+
+
+- (NSString *) replaceBracketsInString:(NSString *)string
+{
+	string = [string stringByReplacingOccurrencesOfString:@"[" withString:@""];
+	string = [string stringByReplacingOccurrencesOfString:@"]" withString:@""];
+	return string;
 }
 
 @end

@@ -36,7 +36,7 @@
 	CGSize maximumLabelSize = CGSizeMake(width - 2*border, 9999);
 	
 	//Лейбл для определения
-	self.definitionLabel.font = [UIFont systemFontOfSize:15 weight:UIFontWeightRegular];
+	self.definitionLabel.font = [UIFont systemFontOfSize:17 weight:UIFontWeightMedium];
 	self.definitionLabel.textAlignment = NSTextAlignmentLeft;
 	self.definitionLabel.numberOfLines = 0;
 	//вычисляем размер
@@ -45,7 +45,7 @@
 	[self.contentView addSubview:self.definitionLabel];
 	
 	//Лейбл для примера использования
-	self.exampleLabel.font = [UIFont systemFontOfSize:15 weight:UIFontWeightRegular];
+	self.exampleLabel.font = [UIFont systemFontOfSize:16 weight:UIFontWeightRegular];
 	self.exampleLabel.textAlignment = NSTextAlignmentLeft;
 	self.exampleLabel.numberOfLines = 0;
 	//вычисляем размер
@@ -55,7 +55,7 @@
 
 	
 	//Лейбл для примера использования
-	self.authorLabel.font = [UIFont systemFontOfSize:15 weight:UIFontWeightRegular];
+	self.authorLabel.font = [UIFont systemFontOfSize:15 weight:UIFontWeightLight];
 	self.authorLabel.textAlignment = NSTextAlignmentLeft;
 	self.authorLabel.numberOfLines = 0;
 	//вычисляем размер
@@ -64,7 +64,7 @@
 	[self.contentView addSubview:self.authorLabel];
 	
 	//Лейбл для примера использования
-	self.dateLabel.font = [UIFont systemFontOfSize:15 weight:UIFontWeightRegular];
+	self.dateLabel.font = [UIFont systemFontOfSize:15 weight:UIFontWeightLight];
 	self.dateLabel.textAlignment = NSTextAlignmentLeft;
 	self.dateLabel.numberOfLines = 0;
 	//вычисляем размер
@@ -89,19 +89,22 @@
 	testLabel.numberOfLines = 0;
 	
 	//Лейбл для определения
-	testLabel.font = [UIFont systemFontOfSize:15 weight:UIFontWeightRegular];
+	testLabel.font = [UIFont systemFontOfSize:17 weight:UIFontWeightMedium];
 	testLabel.text = definition;
 	cellHeight += border + [testLabel sizeThatFits:maximumLabelSize].height;
 	
 	//Лейбл для примера использования
+	testLabel.font = [UIFont systemFontOfSize:16 weight:UIFontWeightRegular];
 	testLabel.text = example;
 	cellHeight += shift + [testLabel sizeThatFits:maximumLabelSize].height;
 	
 	//Лейбл для автора
+	testLabel.font = [UIFont systemFontOfSize:15 weight:UIFontWeightLight];
 	testLabel.text = author;
 	cellHeight += shift + [testLabel sizeThatFits:maximumLabelSize].height;
 	
 	//Лейбл для даты
+	testLabel.font = [UIFont systemFontOfSize:15 weight:UIFontWeightLight];
 	testLabel.text = date;
 	cellHeight += shift + [testLabel sizeThatFits:maximumLabelSize].height;
 	

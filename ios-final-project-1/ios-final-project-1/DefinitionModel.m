@@ -42,24 +42,71 @@
 	return model;
 }
 
+/**
+ Метод, для получения текста определения
+ 
+ @return текст определения
+ */
 - (NSString *)getDefinition
 {
-	return self.definition;
+	NSString *definitionText = nil;
+	if (self.definition != nil)
+	{
+		definitionText = [@"Определение:\n" stringByAppendingString:self.definition];
+	}
+	return definitionText;
 }
 
+/**
+ Метод, для получения имени автора
+ 
+ @return имя автора
+ */
 - (NSString *)getAuthor
 {
-	return self.author;
+	NSString *authorText = nil;
+	if (self.author != nil)
+	{
+		authorText = [@"Автор:\n" stringByAppendingString:self.author];
+	}
+	return authorText;
 }
 
+/**
+ Метод, для получения даты
+ 
+ @return дата
+ */
 - (NSDate *)getDate
 {
 	return self.date;
 }
 
+/**
+ Метод, для получения текста даты
+ 
+ @return текст даты, отформатированный
+ */
+- (NSString *)getDateText
+{
+	NSDateFormatter *formatter = [NSDateFormatter new];
+	[formatter setDateFormat:@"yyyy-MM-dd"];
+	return [formatter stringFromDate:self.date];
+}
+
+/**
+ Метод, для получения текста использования
+ 
+ @return текст примера использования
+ */
 - (NSString *)getExample
 {
-	return self.example;
+	NSString *exampleText = nil;
+	if (self.example != nil)
+	{
+		exampleText = [@"Пример использования:\n" stringByAppendingString:self.example];
+	}
+	return exampleText;
 }
 
 @end
