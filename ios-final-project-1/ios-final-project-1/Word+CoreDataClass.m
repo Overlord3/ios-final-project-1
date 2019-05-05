@@ -7,7 +7,9 @@
 //
 //
 
+
 #import "Word+CoreDataClass.h"
+
 
 @implementation Word
 

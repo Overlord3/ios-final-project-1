@@ -7,7 +7,9 @@
 //
 //
 
+
 #import "Definition+CoreDataClass.h"
+
 
 @implementation Definition
 

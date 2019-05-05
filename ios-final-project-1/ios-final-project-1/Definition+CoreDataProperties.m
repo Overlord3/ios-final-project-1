@@ -7,7 +7,9 @@
 //
 //
 
+
 #import "Definition+CoreDataProperties.h"
+
 
 @implementation Definition (CoreDataProperties)
 

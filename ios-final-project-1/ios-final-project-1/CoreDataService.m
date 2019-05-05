@@ -15,6 +15,12 @@
 
 @implementation CoreDataService
 
+/**
+ Функция поиска слова в локальном хранилище данных
+ 
+ @param searchString Строка для поиска
+ @return Экземпляр класса модели слова с определениями
+ */
 - (WordModel *)findWordWithSearchString:(NSString *)searchString
 {
 	NSManagedObjectContext *context = [self getCoreDataContext];
@@ -37,6 +43,13 @@
 	return wordModel;
 }
 
+
+/**
+ Получение запроса для поиска слова по полю word
+
+ @param searchString строка для поиска слова
+ @return запрос на поиск для примнения в контексте
+ */
 - (NSFetchRequest *)getFetchRequest:(NSString *)searchString
 {
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Word"];
@@ -44,6 +57,11 @@
 	return fetchRequest;
 }
 
+/**
+ Функция сохранения модели слова с определениями в локальную базу данных
+ 
+ @param wordModel модель слова
+ */
 - (void)saveWordModel:(WordModel *)wordModel
 {
 	//Создание контакта
@@ -69,6 +87,12 @@
 	}
 }
 
+/**
+ Получение контекста кордаты
+ Если контекст сохранен, то возвращает из поля, иначе из аппделегата.
+
+ @return контекст кордаты
+ */
 - (NSManagedObjectContext *)getCoreDataContext
 {
 	if (self.coreDataContext)

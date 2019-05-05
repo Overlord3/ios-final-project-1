@@ -7,20 +7,27 @@
 //
 //
 
+
 #import "Word+CoreDataClass.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
+
 @interface Word (CoreDataProperties)
 
 + (NSFetchRequest<Word *> *)fetchRequest;
 
-@property (nullable, nonatomic, copy) NSString *word;
-@property (nullable, nonatomic, retain) NSSet<Definition *> *definitions;
+@property (nullable, nonatomic, copy) NSString *word; /**< Основное слово */
+@property (nullable, nonatomic, retain) NSSet<Definition *> *definitions; /**< Массив определений для слова */
 
 @end
 
+
+/**
+ Интерфейс взаимодействия с зависимостями сущностей
+ Управление определениями (добавление, удаление)
+ */
 @interface Word (CoreDataGeneratedAccessors)
 
 - (void)addDefinitionsObject:(Definition *)value;

@@ -232,9 +232,9 @@
 		FAEFE5F0227F5BA80026FDCE /* CoreData_Definition */ = {
 			isa = PBXGroup;
 			children = (
-				FAEFE600227F63040026FDCE /* Definition+CoreDataProperties.h */,
 				FAEFE601227F63040026FDCE /* Definition+CoreDataClass.h */,
 				FAEFE602227F63040026FDCE /* Definition+CoreDataClass.m */,
+				FAEFE600227F63040026FDCE /* Definition+CoreDataProperties.h */,
 				FAEFE603227F63040026FDCE /* Definition+CoreDataProperties.m */,
 			);
 			name = CoreData_Definition;

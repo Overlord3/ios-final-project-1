@@ -7,7 +7,9 @@
 //
 //
 
+
 #import "Word+CoreDataProperties.h"
+
 
 @implementation Word (CoreDataProperties)
 

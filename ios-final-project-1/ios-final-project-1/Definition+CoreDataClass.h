@@ -7,17 +7,21 @@
 //
 //
 
+
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+
 
 @class Word;
 
 NS_ASSUME_NONNULL_BEGIN
+
 
 @interface Definition : NSManagedObject
 
 @end
 
 NS_ASSUME_NONNULL_END
+
 
 #import "Definition+CoreDataProperties.h"

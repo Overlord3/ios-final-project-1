@@ -7,20 +7,22 @@
 //
 //
 
+
 #import "Definition+CoreDataClass.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
+
 @interface Definition (CoreDataProperties)
 
 + (NSFetchRequest<Definition *> *)fetchRequest;
 
-@property (nullable, nonatomic, copy) NSString *definition;
-@property (nullable, nonatomic, copy) NSString *author;
-@property (nullable, nonatomic, copy) NSDate *date;
-@property (nullable, nonatomic, copy) NSString *example;
-@property (nullable, nonatomic, retain) Word *word;
+@property (nullable, nonatomic, copy) NSString *definition; /**< Определение слова */
+@property (nullable, nonatomic, copy) NSString *author; /**< Автор определения */
+@property (nullable, nonatomic, copy) NSDate *date; /**< Дата определения */
+@property (nullable, nonatomic, copy) NSString *example; /**< Пример использования */
+@property (nullable, nonatomic, retain) Word *word; /**< Слово, в котором это определение находится */
 
 @end
 

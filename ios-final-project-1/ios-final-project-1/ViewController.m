@@ -13,6 +13,7 @@
 #import "DefinitionTableViewCell.h"
 #import "CoreDataService.h"
 
+
 @interface ViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
