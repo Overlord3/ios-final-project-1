@@ -21,7 +21,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UILabel *dateLabel;
 
 
+/**
+ Функция для вычисления высоты ячейки, на основе параметров
 
+ @param definition Текст определения
+ @param example Текст примера
+ @param author Текст автора
+ @param date Текст даты
+ @return Высота ячейки
+ */
 + (CGFloat)calculateHeightWithDefinition:(NSString *)definition example:(NSString *)example author:(NSString *)author date:(NSString *)date;
 
 @end

@@ -66,12 +66,9 @@ static NSString * const identifierForActions = @"AIPcategory";
 	
 	// Создаем триггер
 	UNNotificationTrigger *whateverTrigger = [self intervalTriggerAfterSeconds:seconds repeats:NO];
-	// Другой тип триггера
-	//UNNotificationTrigger *whateverTrigger = [self dateTriggerAfterSecondsFromNow:seconds];
 	// Отправка уведомления
 	[self sendRequestWithContent:content andTrigger:whateverTrigger];
 }
-
 
 /**
  Генерирует и отправляет запрос с контентом и триггером
@@ -94,6 +91,7 @@ static NSString * const identifierForActions = @"AIPcategory";
 	 }];
 }
 
+
 #pragma mark Условия срабатывания, Trigger
 
 /**
@@ -106,23 +104,6 @@ static NSString * const identifierForActions = @"AIPcategory";
 - (UNTimeIntervalNotificationTrigger *)intervalTriggerAfterSeconds:(NSInteger)seconds repeats:(BOOL)repeat
 {
 	return [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:seconds repeats:repeat];
-}
-
-
-/**
- Создает триггер на уведомление по дате, через N секунд от текущей даты
- 
- @param seconds количество секунд с текущей даты
- @return Триггер для уведомления
- */
-- (UNCalendarNotificationTrigger *)dateTriggerAfterSecondsFromNow:(NSInteger)seconds
-{
-	/* Если мы хотим сделать повторяющийся пуш каждый день в одно время, в dateComponents
-	 должны быть только часы/минуты/секунды */
-	NSDate *date = [NSDate dateWithTimeIntervalSinceNow:seconds];
-	NSDateComponents *triggerDate = [[NSCalendar currentCalendar] components:NSCalendarUnitYear + NSCalendarUnitMonth + NSCalendarUnitDay + NSCalendarUnitHour + NSCalendarUnitMinute + NSCalendarUnitSecond fromDate:date];
-	
-	return [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:triggerDate repeats:NO];
 }
 
 

@@ -16,9 +16,7 @@
 @interface ViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) DefinitionTableViewCell *testCell; /**< Ячейка для измерения размера */
 @property (nonatomic, strong) UISearchBar *searchBar;
-
 
 @property (nonatomic, strong) WordModel *wordModel; /**< Слово с определениями для отображения */
 
@@ -51,7 +49,6 @@
 {
 	self.networkService = [NetworkService initService];
 	self.networkService.outputDelegate = self;
-	self.testCell = [DefinitionTableViewCell new];
 }
 
 - (void)prepareUI
@@ -142,7 +139,11 @@
 	return height;
 }
 
-
+/**
+ Возвращает данные в презентер, когда запрос выполнен
+ 
+ @param word Определения к найденному слову
+ */
 - (void)searchingFinishedWithWord:(WordModel *)word
 {
 	self.wordModel = word;

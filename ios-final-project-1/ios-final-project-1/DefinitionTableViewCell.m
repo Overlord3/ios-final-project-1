@@ -12,7 +12,13 @@
 
 @implementation DefinitionTableViewCell
 
+/**
+ Инициализатор ячейки
 
+ @param style стиль
+ @param reuseIdentifier идентификатор
+ @return экземпляр класса ячейки
+ */
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
 	self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -23,6 +29,9 @@
 	return self;
 }
 
+/**
+ Расстановка элементов UI в ячейке
+ */
 - (void)layoutSubviews
 {
 	//Всего высота -
@@ -73,7 +82,15 @@
 	[self.contentView addSubview:self.dateLabel];
 }
 
-
+/**
+ Функция для вычисления высоты ячейки, на основе параметров
+ 
+ @param definition Текст определения
+ @param example Текст примера
+ @param author Текст автора
+ @param date Текст даты
+ @return Высота ячейки
+ */
 + (CGFloat)calculateHeightWithDefinition:(NSString *)definition example:(NSString *)example author:(NSString *)author date:(NSString *)date
 {
 	CGFloat width = UIScreen.mainScreen.bounds.size.width;

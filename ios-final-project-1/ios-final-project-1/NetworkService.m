@@ -23,6 +23,12 @@
 
 #pragma Initialization
 
+/**
+ Инициализатор сервиса
+ Проинициализирует все необходимые свойства и настроит сессию
+
+ @return экземпляр класса NetworkService
+ */
 + (instancetype)initService
 {
 	NetworkService *service = [NetworkService new];
@@ -31,6 +37,9 @@
 }
 
 
+/**
+ Настраивает URL сессию.
+ */
 - (void)configureUrlSession
 {
 	NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -43,7 +52,11 @@
 	self.urlSession = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:self delegateQueue:nil];
 }
 
-
+/**
+ Поиск определений слов в сервисе
+ 
+ @param searchString Строка поиска, на английском обязательно
+ */
 - (void)searchDefinitionsForString:(NSString *)searchString;
 {
 	NSString *urlString = [NSString stringWithFormat: @"http://api.urbandictionary.com/v0/define?term=%@", searchString];
@@ -105,7 +118,12 @@
 	[sessionDataTask resume];
 }
 
+/**
+ Вспомогательная функция для удаления квадратных скобок из строки.
 
+ @param string Входная строка со скобками
+ @return Строка без скобок
+ */
 - (NSString *) replaceBracketsInString:(NSString *)string
 {
 	string = [string stringByReplacingOccurrencesOfString:@"[" withString:@""];
