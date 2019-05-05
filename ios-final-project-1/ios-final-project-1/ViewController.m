@@ -11,7 +11,7 @@
 #import "NetworkService.h"
 #import "NotificationService.h"
 #import "DefinitionTableViewCell.h"
-
+#import "CoreDataService.h"
 
 @interface ViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
@@ -24,6 +24,7 @@
 
 @property (nonatomic, strong) NotificationService *notificationService; /**< Сервис для уведомлений */
 @property (nonatomic, strong) NetworkService *networkService; /**< Сервис для взаимодействия с сетью */
+@property (nonatomic, strong) CoreDataService *coreDataService; /**< Сервис для сохранения данных */
 
 @end
 
@@ -47,6 +48,7 @@
 
 - (void)prepareModels
 {
+	self.coreDataService = [CoreDataService new];
 	self.networkService = [NetworkService initService];
 	self.networkService.outputDelegate = self;
 }
@@ -94,8 +96,18 @@
 		//Перезапишем предыдущий запрос
 		self.previousRequest = searchBar.text;
 	}
-	//Вызвать поиск
-	[self.networkService searchDefinitionsForString:searchBar.text];
+	//Попробуем вызвать поиск локальный
+	WordModel* model = [self.coreDataService findWordWithSearchString:searchBar.text];
+	if (model == nil)
+	{
+		//Вызвать поиск
+		[self.networkService searchDefinitionsForString:searchBar.text];
+	}
+	else
+	{
+		self.wordModel = model;
+		[self.tableView reloadData];
+	}
 }
 
 
@@ -146,6 +158,7 @@
  */
 - (void)searchingFinishedWithWord:(WordModel *)word
 {
+	[self.coreDataService saveWordModel:word];
 	self.wordModel = word;
 	[self.tableView reloadData];
 }
