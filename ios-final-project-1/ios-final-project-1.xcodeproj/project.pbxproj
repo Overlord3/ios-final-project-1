@@ -20,6 +20,11 @@
 		FAC416E2227C9658006F4110 /* WordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416E1227C9658006F4110 /* WordModel.m */; };
 		FAC416E5227CB7F2006F4110 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416E4227CB7F2006F4110 /* NotificationService.m */; };
 		FAEFE5E1227DD75F0026FDCE /* DefinitionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5E0227DD75F0026FDCE /* DefinitionTableViewCell.m */; };
+		FAEFE5F3227F5CE60026FDCE /* CoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5F2227F5CE60026FDCE /* CoreDataService.m */; };
+		FAEFE5FC227F60E50026FDCE /* Word+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5F6227F60E50026FDCE /* Word+CoreDataClass.m */; };
+		FAEFE5FD227F60E50026FDCE /* Word+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5F7227F60E50026FDCE /* Word+CoreDataProperties.m */; };
+		FAEFE604227F63040026FDCE /* Definition+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE602227F63040026FDCE /* Definition+CoreDataClass.m */; };
+		FAEFE605227F63040026FDCE /* Definition+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE603227F63040026FDCE /* Definition+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,16 @@
 		FAC416E4227CB7F2006F4110 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
 		FAEFE5DF227DD75F0026FDCE /* DefinitionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefinitionTableViewCell.h; sourceTree = "<group>"; };
 		FAEFE5E0227DD75F0026FDCE /* DefinitionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefinitionTableViewCell.m; sourceTree = "<group>"; };
+		FAEFE5F1227F5CE60026FDCE /* CoreDataService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataService.h; sourceTree = "<group>"; };
+		FAEFE5F2227F5CE60026FDCE /* CoreDataService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataService.m; sourceTree = "<group>"; };
+		FAEFE5F4227F60E50026FDCE /* Word+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Word+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FAEFE5F5227F60E50026FDCE /* Word+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Word+CoreDataClass.h"; sourceTree = "<group>"; };
+		FAEFE5F6227F60E50026FDCE /* Word+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Word+CoreDataClass.m"; sourceTree = "<group>"; };
+		FAEFE5F7227F60E50026FDCE /* Word+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Word+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FAEFE600227F63040026FDCE /* Definition+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Definition+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FAEFE601227F63040026FDCE /* Definition+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Definition+CoreDataClass.h"; sourceTree = "<group>"; };
+		FAEFE602227F63040026FDCE /* Definition+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Definition+CoreDataClass.m"; sourceTree = "<group>"; };
+		FAEFE603227F63040026FDCE /* Definition+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Definition+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +134,7 @@
 			children = (
 				FAC4169F227C7EB7006F4110 /* AppDelegate.h */,
 				FAC416A0227C7EB7006F4110 /* AppDelegate.m */,
+				FAEFE5E2227F5ABB0026FDCE /* CoreData */,
 				FAC416DC227C865E006F4110 /* Model */,
 				FAC416D7227C85A9006F4110 /* Service */,
 				FAC416D4227C827F006F4110 /* View */,
@@ -189,6 +205,39 @@
 				FAEFE5E0227DD75F0026FDCE /* DefinitionTableViewCell.m */,
 			);
 			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		FAEFE5E2227F5ABB0026FDCE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FAEFE5F0227F5BA80026FDCE /* CoreData_Definition */,
+				FAEFE5EF227F5BA10026FDCE /* CoreData_Word */,
+				FAEFE5F1227F5CE60026FDCE /* CoreDataService.h */,
+				FAEFE5F2227F5CE60026FDCE /* CoreDataService.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		FAEFE5EF227F5BA10026FDCE /* CoreData_Word */ = {
+			isa = PBXGroup;
+			children = (
+				FAEFE5F5227F60E50026FDCE /* Word+CoreDataClass.h */,
+				FAEFE5F6227F60E50026FDCE /* Word+CoreDataClass.m */,
+				FAEFE5F4227F60E50026FDCE /* Word+CoreDataProperties.h */,
+				FAEFE5F7227F60E50026FDCE /* Word+CoreDataProperties.m */,
+			);
+			name = CoreData_Word;
+			sourceTree = "<group>";
+		};
+		FAEFE5F0227F5BA80026FDCE /* CoreData_Definition */ = {
+			isa = PBXGroup;
+			children = (
+				FAEFE600227F63040026FDCE /* Definition+CoreDataProperties.h */,
+				FAEFE601227F63040026FDCE /* Definition+CoreDataClass.h */,
+				FAEFE602227F63040026FDCE /* Definition+CoreDataClass.m */,
+				FAEFE603227F63040026FDCE /* Definition+CoreDataProperties.m */,
+			);
+			name = CoreData_Definition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,14 +369,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAEFE605227F63040026FDCE /* Definition+CoreDataProperties.m in Sources */,
 				FAC416E5227CB7F2006F4110 /* NotificationService.m in Sources */,
 				FAC416AA227C7EB7006F4110 /* ios_final_project_1.xcdatamodeld in Sources */,
 				FAC416DF227C8686006F4110 /* DefinitionModel.m in Sources */,
 				FAC416A4227C7EB7006F4110 /* ViewController.m in Sources */,
 				FAEFE5E1227DD75F0026FDCE /* DefinitionTableViewCell.m in Sources */,
 				FAC416E2227C9658006F4110 /* WordModel.m in Sources */,
+				FAEFE5FC227F60E50026FDCE /* Word+CoreDataClass.m in Sources */,
 				FAC416B2227C7EB8006F4110 /* main.m in Sources */,
+				FAEFE604227F63040026FDCE /* Definition+CoreDataClass.m in Sources */,
+				FAEFE5FD227F60E50026FDCE /* Word+CoreDataProperties.m in Sources */,
 				FAC416A1227C7EB7006F4110 /* AppDelegate.m in Sources */,
+				FAEFE5F3227F5CE60026FDCE /* CoreDataService.m in Sources */,
 				FAC416DA227C85CD006F4110 /* NetworkService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
