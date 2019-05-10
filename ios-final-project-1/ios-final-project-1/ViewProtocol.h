@@ -10,4 +10,26 @@
 #define ViewProtocol_h
 
 
+#import "WordModel.h"
+
+
+@protocol ViewProtocol <NSObject>
+
+/**
+ Возвращает данные в контроллер, когда запрос выполнен
+ 
+ @param word Слово и определения к нему
+ */
+- (void)searchingFinishedWithWord:(WordModel *)word;
+
+/**
+ Показывает алерт с заголовком и сообщением и действием ОК
+ 
+ @param title Заголовок сообщения
+ @param message Текст сообщения
+ */
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
+
+@end
+
 #endif /* ViewProtocol_h */

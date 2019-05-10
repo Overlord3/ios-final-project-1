@@ -9,5 +9,18 @@
 #ifndef PresenterProtocol_h
 #define PresenterProtocol_h
 
+@protocol PresenterProtocol <NSObject>
+
+
+/**
+ Отправляет запрос на поиск определений слова
+
+ @param searchText Текст для поиска
+ */
+- (void)searchWithText:(NSString *)searchText;
+
+
+
+@end
 
 #endif /* PresenterProtocol_h */

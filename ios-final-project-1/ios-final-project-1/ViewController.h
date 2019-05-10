@@ -8,10 +8,12 @@
 
 
 #import <UIKit/UIKit.h>
-#import "NetworkServiceProtocol.h"
+#import "ViewProtocol.h"
+#import "PresenterProtocol.h"
 
 
-@interface ViewController : UIViewController<NetworkServiceOutputProtocol>
+@interface ViewController : UIViewController<ViewProtocol>
 
+@property(nonatomic, strong) id<PresenterProtocol> presenter;
 
 @end

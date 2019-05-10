@@ -8,10 +8,7 @@
 
 
 #import "ViewController.h"
-#import "NetworkService.h"
-#import "NotificationService.h"
 #import "DefinitionTableViewCell.h"
-#import "CoreDataService.h"
 
 
 @interface ViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
@@ -21,12 +18,6 @@
 
 @property (nonatomic, strong) WordModel *wordModel; /**< Слово с определениями для отображения */
 
-@property (nonatomic, strong) NSString *previousRequest; /**< Предыдущий запрос, нужен для уведомлений */
-
-@property (nonatomic, strong) NotificationService *notificationService; /**< Сервис для уведомлений */
-@property (nonatomic, strong) NetworkService *networkService; /**< Сервис для взаимодействия с сетью */
-@property (nonatomic, strong) CoreDataService *coreDataService; /**< Сервис для сохранения данных */
-
 @end
 
 
@@ -35,8 +26,6 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	// Do any additional setup after loading the view.
-	[self prepareModels];
 	[self prepareUI];
 	[self.tableView registerClass:DefinitionTableViewCell.class forCellReuseIdentifier:DefinitionTableViewCell.description];
 }
@@ -45,13 +34,6 @@
 {
 	[super viewWillAppear:animated];
 	self.title = @"Поиск определений слов";
-}
-
-- (void)prepareModels
-{
-	self.coreDataService = [CoreDataService new];
-	self.networkService = [NetworkService initService];
-	self.networkService.outputDelegate = self;
 }
 
 - (void)prepareUI
@@ -84,31 +66,8 @@
 	//скрыть клавиатуру
 	[searchBar resignFirstResponder];
 	
-	//Отправить уведомление про прошлый поиск
-	if (self.previousRequest == nil)
-	{
-		self.previousRequest = searchBar.text;
-	}
-	else
-	{
-		//Сформируем и отправим
-		NSString *title = [NSString stringWithFormat:@"Вы давно не смотрели определение слова - %@!", self.previousRequest];
-		[self.notificationService sendLocalNotificationAfterSeconds:10 withTitle:title andSearchText: self.previousRequest];
-		//Перезапишем предыдущий запрос
-		self.previousRequest = searchBar.text;
-	}
-	//Попробуем вызвать поиск локальный
-	WordModel* model = [self.coreDataService findWordWithSearchString:searchBar.text];
-	if (model == nil)
-	{
-		//Вызвать поиск
-		[self.networkService searchDefinitionsForString:searchBar.text];
-	}
-	else
-	{
-		self.wordModel = model;
-		[self.tableView reloadData];
-	}
+	//Сообщить презентеру о действия пользователя
+	[self.presenter searchWithText:searchBar.text];
 }
 
 
@@ -152,16 +111,38 @@
 	return height;
 }
 
+
+#pragma ViewProtocol
+
 /**
- Возвращает данные в презентер, когда запрос выполнен
+ Возвращает данные в контроллер, когда запрос выполнен
  
- @param word Определения к найденному слову
+ @param word Слово и определения к нему
  */
 - (void)searchingFinishedWithWord:(WordModel *)word
 {
-	[self.coreDataService saveWordModel:word];
 	self.wordModel = word;
 	[self.tableView reloadData];
 }
+
+/**
+Показывает алерт с заголовком и сообщением и действием ОК
+
+@param title Заголовок сообщения
+@param message Текст сообщения
+*/
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message
+{
+	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+	
+	UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"Ок" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+		[alertController dismissViewControllerAnimated:true completion:nil];
+	}];
+	
+	[alertController addAction:alertAction];
+	
+	[self presentViewController:alertController animated:true completion:nil];
+}
+
 
 @end
