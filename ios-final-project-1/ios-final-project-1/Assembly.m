@@ -6,8 +6,29 @@
 //  Copyright © 2019 Alex. All rights reserved.
 //
 
+
 #import "Assembly.h"
 
+
 @implementation Assembly
+
+
+/**
+ Собирает архитектуру MVP,
+
+ @return Возвращает рутконтроллер для window
+ */
+- (UIViewController *) assemblySearchScreen
+{
+	ViewController *viewController = [ViewController new];
+	Presenter *presenter = [Presenter new];
+	
+	viewController.presenter = presenter;
+	presenter.view = viewController;
+	
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+	
+	return navigationController;
+}
 
 @end

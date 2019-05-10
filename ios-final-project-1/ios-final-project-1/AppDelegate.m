@@ -8,7 +8,7 @@
 
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "Assembly.h"
 
 
 @interface AppDelegate ()
@@ -21,13 +21,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
-	//Сборка архитектуры, создаем View, NavigationController, Window и собираем
-	ViewController *viewController = [ViewController new];
-	
-	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+	Assembly *assembly = [Assembly new];
+	UIViewController *rootViewController = [assembly assemblySearchScreen];
 	
 	self.window = [UIWindow new];
-	[self.window setRootViewController:navController];
+	[self.window setRootViewController:rootViewController];
 	[self.window makeKeyAndVisible];
 	
 	return YES;
