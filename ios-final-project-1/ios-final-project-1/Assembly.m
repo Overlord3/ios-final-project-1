@@ -8,6 +8,11 @@
 
 
 #import "Assembly.h"
+#import "ViewController.h"
+#import "Presenter.h"
+#import "CoreDataService.h"
+#import "NetworkService.h"
+#import "NotificationService.h"
 
 
 @implementation Assembly
@@ -22,9 +27,16 @@
 {
 	ViewController *viewController = [ViewController new];
 	Presenter *presenter = [Presenter new];
+	NetworkService *networkService = [NetworkService initService];
+	CoreDataService *coreDataService = [CoreDataService new];
+	NotificationService *notificationService = [NotificationService new];
+	
+	presenter.networkService = networkService;
+	presenter.coreDataService = coreDataService;
+	presenter.notificationService = notificationService;
+	presenter.view = viewController;
 	
 	viewController.presenter = presenter;
-	presenter.view = viewController;
 	
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
 	

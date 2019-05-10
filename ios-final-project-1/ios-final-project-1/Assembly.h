@@ -8,8 +8,6 @@
 
 
 #import <UIKit/UIKit.h>
-#import "ViewController.h"
-#import "Presenter.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
