@@ -19,6 +19,8 @@
 		FAC416DF227C8686006F4110 /* DefinitionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416DE227C8686006F4110 /* DefinitionModel.m */; };
 		FAC416E2227C9658006F4110 /* WordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416E1227C9658006F4110 /* WordModel.m */; };
 		FAC416E5227CB7F2006F4110 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416E4227CB7F2006F4110 /* NotificationService.m */; };
+		FAD5048F2285C75600B908A7 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD5048E2285C75600B908A7 /* Presenter.m */; };
+		FAD504962285CD0B00B908A7 /* Assembly.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD504952285CD0B00B908A7 /* Assembly.m */; };
 		FAEFE5E1227DD75F0026FDCE /* DefinitionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5E0227DD75F0026FDCE /* DefinitionTableViewCell.m */; };
 		FAEFE5F3227F5CE60026FDCE /* CoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5F2227F5CE60026FDCE /* CoreDataService.m */; };
 		FAEFE5FC227F60E50026FDCE /* Word+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5F6227F60E50026FDCE /* Word+CoreDataClass.m */; };
@@ -70,6 +72,12 @@
 		FAC416E1227C9658006F4110 /* WordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordModel.m; sourceTree = "<group>"; };
 		FAC416E3227CB7F2006F4110 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
 		FAC416E4227CB7F2006F4110 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		FAD5048D2285C75600B908A7 /* Presenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presenter.h; sourceTree = "<group>"; };
+		FAD5048E2285C75600B908A7 /* Presenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Presenter.m; sourceTree = "<group>"; };
+		FAD504902285C7ED00B908A7 /* PresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresenterProtocol.h; sourceTree = "<group>"; };
+		FAD504932285CA5000B908A7 /* ViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewProtocol.h; sourceTree = "<group>"; };
+		FAD504942285CD0B00B908A7 /* Assembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Assembly.h; sourceTree = "<group>"; };
+		FAD504952285CD0B00B908A7 /* Assembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Assembly.m; sourceTree = "<group>"; };
 		FAEFE5DF227DD75F0026FDCE /* DefinitionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefinitionTableViewCell.h; sourceTree = "<group>"; };
 		FAEFE5E0227DD75F0026FDCE /* DefinitionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefinitionTableViewCell.m; sourceTree = "<group>"; };
 		FAEFE5F1227F5CE60026FDCE /* CoreDataService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataService.h; sourceTree = "<group>"; };
@@ -134,6 +142,8 @@
 			children = (
 				FAC4169F227C7EB7006F4110 /* AppDelegate.h */,
 				FAC416A0227C7EB7006F4110 /* AppDelegate.m */,
+				FAD504942285CD0B00B908A7 /* Assembly.h */,
+				FAD504952285CD0B00B908A7 /* Assembly.m */,
 				FAEFE5E2227F5ABB0026FDCE /* CoreData */,
 				FAC416DC227C865E006F4110 /* Model */,
 				FAC416D7227C85A9006F4110 /* Service */,
@@ -168,9 +178,8 @@
 		FAC416D4227C827F006F4110 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FAEFE5DE227DD6630026FDCE /* TableViewCell */,
-				FAC416A2227C7EB7006F4110 /* ViewController.h */,
-				FAC416A3227C7EB7006F4110 /* ViewController.m */,
+				FAD504922285C80A00B908A7 /* View */,
+				FAD504912285C7FE00B908A7 /* Presenter */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -196,6 +205,27 @@
 				FAC416DE227C8686006F4110 /* DefinitionModel.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		FAD504912285C7FE00B908A7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAD504902285C7ED00B908A7 /* PresenterProtocol.h */,
+				FAD5048D2285C75600B908A7 /* Presenter.h */,
+				FAD5048E2285C75600B908A7 /* Presenter.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		FAD504922285C80A00B908A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAD504932285CA5000B908A7 /* ViewProtocol.h */,
+				FAC416A2227C7EB7006F4110 /* ViewController.h */,
+				FAC416A3227C7EB7006F4110 /* ViewController.m */,
+				FAEFE5DE227DD6630026FDCE /* TableViewCell */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		FAEFE5DE227DD6630026FDCE /* TableViewCell */ = {
@@ -374,6 +404,8 @@
 				FAC416AA227C7EB7006F4110 /* ios_final_project_1.xcdatamodeld in Sources */,
 				FAC416DF227C8686006F4110 /* DefinitionModel.m in Sources */,
 				FAC416A4227C7EB7006F4110 /* ViewController.m in Sources */,
+				FAD504962285CD0B00B908A7 /* Assembly.m in Sources */,
+				FAD5048F2285C75600B908A7 /* Presenter.m in Sources */,
 				FAEFE5E1227DD75F0026FDCE /* DefinitionTableViewCell.m in Sources */,
 				FAC416E2227C9658006F4110 /* WordModel.m in Sources */,
 				FAEFE5FC227F60E50026FDCE /* Word+CoreDataClass.m in Sources */,
