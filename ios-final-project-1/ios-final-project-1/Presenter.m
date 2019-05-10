@@ -20,18 +20,6 @@
 @implementation Presenter
 
 
-- (instancetype)init
-{
-	self = [super init];
-	if (self) {
-		_coreDataService = [CoreDataService new];
-		_networkService = [NetworkService initService];
-		_networkService.outputDelegate = self;
-	}
-	return self;
-}
-
-
 - (void)searchWithText:(NSString *)searchText
 {
 	if (![self checkForEnglishLettersOnlyInText:searchText])

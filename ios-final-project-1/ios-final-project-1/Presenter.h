@@ -8,11 +8,11 @@
 
 
 #import <Foundation/Foundation.h>
-#import "CoreDataService.h"
-#import "NetworkService.h"
-#import "NotificationService.h"
-#import "ViewProtocol.h"
 #import "PresenterProtocol.h"
+#import "CoreDataServiceProtocol.h"
+#import "NetworkServiceProtocol.h"
+#import "NotificationServiceProtocol.h"
+#import "ViewProtocol.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -20,11 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Presenter : NSObject<PresenterProtocol, NetworkServiceOutputProtocol>
 
-@property(nonatomic, weak) id<ViewProtocol> view; /**< Вью */
+@property(nonatomic, weak) id<ViewProtocol> view; /**< Вью, держит weak, так как вью держит презентер strong ссылкой */
 
-@property (nonatomic, strong) NotificationService *notificationService; /**< Сервис для уведомлений */
-@property (nonatomic, strong) NetworkService *networkService; /**< Сервис для взаимодействия с сетью */
-@property (nonatomic, strong) CoreDataService *coreDataService; /**< Сервис для сохранения данных */
+@property (nonatomic, strong) id<NotiticationServiceProtocol> notificationService; /**< Сервис для уведомлений */
+@property (nonatomic, strong) id<NetworkServiceInputProtocol> networkService; /**< Сервис для взаимодействия с сетью */
+@property (nonatomic, strong) id<CoreDataServiceProtocol> coreDataService; /**< Сервис для сохранения данных */
 
 @end
 
