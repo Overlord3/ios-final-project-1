@@ -9,32 +9,16 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "CoreDataServiceProtocol.h"
 #import "WordModel.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
 
-@interface CoreDataService : NSObject
+@interface CoreDataService : NSObject<CoreDataServiceProtocol>
 
 @property (nonatomic, strong) NSManagedObjectContext *coreDataContext; /**< Контекст для сохранения данных */
-
-
-/**
- Функция поиска слова в локальном базе данных
-
- @param searchString Строка для поиска
- @return Экземпляр класса модели слова с определениями
- */
-- (WordModel *)findWordWithSearchString:(NSString *)searchString;
-
-/**
- Функция сохранения модели слова с определениями в локальную базу данных
-
- @param wordModel модель слова
- */
-- (void)saveWordModel:(WordModel *)wordModel;
-
 
 @end
 
