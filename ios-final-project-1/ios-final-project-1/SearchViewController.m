@@ -13,8 +13,8 @@
 
 @interface SearchViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) UISearchBar *searchBar;
+@property (nonatomic, strong) UITableView *tableView; /**< UI для отображения результатов поиска */
+@property (nonatomic, strong) UISearchBar *searchBar; /**< UI для строки поиска */
 
 @property (nonatomic, strong) WordModel *wordModel; /**< Слово с определениями для отображения */
 
@@ -36,6 +36,10 @@
 	self.title = @"Поиск определений слов";
 }
 
+
+/**
+ Инициализация UI
+ */
 - (void)prepareUI
 {
 	self.view.backgroundColor = UIColor.whiteColor;

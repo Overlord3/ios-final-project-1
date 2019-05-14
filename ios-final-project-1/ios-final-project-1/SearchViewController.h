@@ -14,6 +14,6 @@
 
 @interface SearchViewController : UIViewController<SearchViewProtocol>
 
-@property(nonatomic, strong) id<SearchPresenterProtocol> presenter;
+@property(nonatomic, strong) id<SearchPresenterProtocol> presenter; /**< Презентер этого вью */
 
 @end

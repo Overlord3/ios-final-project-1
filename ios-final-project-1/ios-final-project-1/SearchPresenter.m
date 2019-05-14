@@ -20,6 +20,8 @@
 @implementation SearchPresenter
 
 
+#pragma SearchPresenterProtocol
+
 - (void)searchWithText:(NSString *)searchText
 {
 	if (![self checkForEnglishLettersOnlyInText:searchText])
@@ -46,6 +48,12 @@
 }
 
 
+/**
+ Проверка текста запроса перед отправкой в сервис на валидные символы
+
+ @param text текст запроса
+ @return содержит ли запрос только английские буквы и цифры или нет
+ */
 - (BOOL) checkForEnglishLettersOnlyInText:(NSString *)text
 {
 	NSCharacterSet *englishLettersWithNumbers = [NSCharacterSet characterSetWithCharactersInString: @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"];
@@ -55,7 +63,11 @@
 	return range.location == NSNotFound;
 }
 
+/**
+ Отправляет пуш-уведомление с текстом предыдущего запроса
 
+ @param searchText текст нового запроса
+ */
 - (void) sendLocalPushNotificationWithSearchText:(NSString *)searchText
 {
 	if (self.previousRequest == nil)
@@ -73,8 +85,10 @@
 }
 
 
+#pragma NetworkOutputProtocol
+
 /**
- Возвращает данные в контроллер, когда запрос выполнен
+ Возвращает данные в презентер, когда запрос выполнен
  
  @param word Слово и определения к нему
  */

@@ -13,7 +13,8 @@
 
 @implementation Definition (CoreDataProperties)
 
-+ (NSFetchRequest<Definition *> *)fetchRequest {
++ (NSFetchRequest<Definition *> *)fetchRequest
+{
 	return [NSFetchRequest fetchRequestWithEntityName:@"Definition"];
 }
 

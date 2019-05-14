@@ -259,8 +259,24 @@
 		FAD504CE228B215D00B908A7 /* DictionaryScreen */ = {
 			isa = PBXGroup;
 			children = (
+				FAD504D0228B44E800B908A7 /* DictionaryPresenter */,
+				FAD504CF228B44DD00B908A7 /* DictionaryView */,
 			);
 			name = DictionaryScreen;
+			sourceTree = "<group>";
+		};
+		FAD504CF228B44DD00B908A7 /* DictionaryView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DictionaryView;
+			sourceTree = "<group>";
+		};
+		FAD504D0228B44E800B908A7 /* DictionaryPresenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DictionaryPresenter;
 			sourceTree = "<group>";
 		};
 		FAEFE5DE227DD6630026FDCE /* TableViewCell */ = {

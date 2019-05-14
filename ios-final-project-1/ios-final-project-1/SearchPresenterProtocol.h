@@ -9,6 +9,7 @@
 #ifndef SearchPresenterProtocol_h
 #define SearchPresenterProtocol_h
 
+
 @protocol SearchPresenterProtocol <NSObject>
 
 /**

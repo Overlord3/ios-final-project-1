@@ -26,7 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (instancetype) initWithDefinition:(NSString *)definition author:(NSString *)author date:(NSDate *)date example:(NSString *)example;
 
-
 /**
  Метод, для получения текста определения
 

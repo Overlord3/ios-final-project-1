@@ -22,7 +22,6 @@
 
 @implementation DefinitionModel
 
-
 /**
  Инициализатор модели определения
 

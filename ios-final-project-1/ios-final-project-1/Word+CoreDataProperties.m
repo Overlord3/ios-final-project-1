@@ -13,7 +13,8 @@
 
 @implementation Word (CoreDataProperties)
 
-+ (NSFetchRequest<Word *> *)fetchRequest {
++ (NSFetchRequest<Word *> *)fetchRequest
+{
 	return [NSFetchRequest fetchRequestWithEntityName:@"Word"];
 }
 
