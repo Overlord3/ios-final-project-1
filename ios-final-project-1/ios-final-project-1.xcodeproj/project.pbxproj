@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FAC416A1227C7EB7006F4110 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416A0227C7EB7006F4110 /* AppDelegate.m */; };
-		FAC416A4227C7EB7006F4110 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416A3227C7EB7006F4110 /* ViewController.m */; };
+		FAC416A4227C7EB7006F4110 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416A3227C7EB7006F4110 /* SearchViewController.m */; };
 		FAC416AA227C7EB7006F4110 /* ios_final_project_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC416A8227C7EB7006F4110 /* ios_final_project_1.xcdatamodeld */; };
 		FAC416AC227C7EB8006F4110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC416AB227C7EB8006F4110 /* Assets.xcassets */; };
 		FAC416AF227C7EB8006F4110 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC416AD227C7EB8006F4110 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		FAC416DF227C8686006F4110 /* DefinitionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416DE227C8686006F4110 /* DefinitionModel.m */; };
 		FAC416E2227C9658006F4110 /* WordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416E1227C9658006F4110 /* WordModel.m */; };
 		FAC416E5227CB7F2006F4110 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416E4227CB7F2006F4110 /* NotificationService.m */; };
-		FAD5048F2285C75600B908A7 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD5048E2285C75600B908A7 /* Presenter.m */; };
+		FAD5048F2285C75600B908A7 /* SearchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD5048E2285C75600B908A7 /* SearchPresenter.m */; };
 		FAD504962285CD0B00B908A7 /* Assembly.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD504952285CD0B00B908A7 /* Assembly.m */; };
 		FAEFE5E1227DD75F0026FDCE /* DefinitionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5E0227DD75F0026FDCE /* DefinitionTableViewCell.m */; };
 		FAEFE5F3227F5CE60026FDCE /* CoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5F2227F5CE60026FDCE /* CoreDataService.m */; };
@@ -50,8 +50,8 @@
 		FAC4169C227C7EB7006F4110 /* ios-final-project-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-final-project-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC4169F227C7EB7006F4110 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAC416A0227C7EB7006F4110 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FAC416A2227C7EB7006F4110 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FAC416A3227C7EB7006F4110 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FAC416A2227C7EB7006F4110 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		FAC416A3227C7EB7006F4110 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		FAC416A9227C7EB7006F4110 /* ios_final_project_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios_final_project_1.xcdatamodel; sourceTree = "<group>"; };
 		FAC416AB227C7EB8006F4110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAC416AE227C7EB8006F4110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,10 +72,10 @@
 		FAC416E1227C9658006F4110 /* WordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordModel.m; sourceTree = "<group>"; };
 		FAC416E3227CB7F2006F4110 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
 		FAC416E4227CB7F2006F4110 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
-		FAD5048D2285C75600B908A7 /* Presenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presenter.h; sourceTree = "<group>"; };
-		FAD5048E2285C75600B908A7 /* Presenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Presenter.m; sourceTree = "<group>"; };
-		FAD504902285C7ED00B908A7 /* PresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresenterProtocol.h; sourceTree = "<group>"; };
-		FAD504932285CA5000B908A7 /* ViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewProtocol.h; sourceTree = "<group>"; };
+		FAD5048D2285C75600B908A7 /* SearchPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchPresenter.h; sourceTree = "<group>"; };
+		FAD5048E2285C75600B908A7 /* SearchPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchPresenter.m; sourceTree = "<group>"; };
+		FAD504902285C7ED00B908A7 /* SearchPresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchPresenterProtocol.h; sourceTree = "<group>"; };
+		FAD504932285CA5000B908A7 /* SearchViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewProtocol.h; sourceTree = "<group>"; };
 		FAD504942285CD0B00B908A7 /* Assembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Assembly.h; sourceTree = "<group>"; };
 		FAD504952285CD0B00B908A7 /* Assembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Assembly.m; sourceTree = "<group>"; };
 		FAD504972285D16600B908A7 /* CoreDataServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataServiceProtocol.h; sourceTree = "<group>"; };
@@ -180,8 +180,8 @@
 		FAC416D4227C827F006F4110 /* PresenterLayer */ = {
 			isa = PBXGroup;
 			children = (
-				FAD504922285C80A00B908A7 /* View */,
-				FAD504912285C7FE00B908A7 /* Presenter */,
+				FAD504CD228B214A00B908A7 /* SearchScreen */,
+				FAD504CE228B215D00B908A7 /* DictionaryScreen */,
 			);
 			name = PresenterLayer;
 			sourceTree = "<group>";
@@ -206,25 +206,25 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		FAD504912285C7FE00B908A7 /* Presenter */ = {
+		FAD504912285C7FE00B908A7 /* SearchPresenter */ = {
 			isa = PBXGroup;
 			children = (
-				FAD504902285C7ED00B908A7 /* PresenterProtocol.h */,
-				FAD5048D2285C75600B908A7 /* Presenter.h */,
-				FAD5048E2285C75600B908A7 /* Presenter.m */,
+				FAD504902285C7ED00B908A7 /* SearchPresenterProtocol.h */,
+				FAD5048D2285C75600B908A7 /* SearchPresenter.h */,
+				FAD5048E2285C75600B908A7 /* SearchPresenter.m */,
 			);
-			name = Presenter;
+			name = SearchPresenter;
 			sourceTree = "<group>";
 		};
-		FAD504922285C80A00B908A7 /* View */ = {
+		FAD504922285C80A00B908A7 /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
-				FAD504932285CA5000B908A7 /* ViewProtocol.h */,
-				FAC416A2227C7EB7006F4110 /* ViewController.h */,
-				FAC416A3227C7EB7006F4110 /* ViewController.m */,
+				FAD504932285CA5000B908A7 /* SearchViewProtocol.h */,
+				FAC416A2227C7EB7006F4110 /* SearchViewController.h */,
+				FAC416A3227C7EB7006F4110 /* SearchViewController.m */,
 				FAEFE5DE227DD6630026FDCE /* TableViewCell */,
 			);
-			name = View;
+			name = SearchView;
 			sourceTree = "<group>";
 		};
 		FAD504982285D2DB00B908A7 /* NetworkService */ = {
@@ -245,6 +245,22 @@
 				FAC416E4227CB7F2006F4110 /* NotificationService.m */,
 			);
 			name = NotificationService;
+			sourceTree = "<group>";
+		};
+		FAD504CD228B214A00B908A7 /* SearchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FAD504912285C7FE00B908A7 /* SearchPresenter */,
+				FAD504922285C80A00B908A7 /* SearchView */,
+			);
+			name = SearchScreen;
+			sourceTree = "<group>";
+		};
+		FAD504CE228B215D00B908A7 /* DictionaryScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DictionaryScreen;
 			sourceTree = "<group>";
 		};
 		FAEFE5DE227DD6630026FDCE /* TableViewCell */ = {
@@ -423,9 +439,9 @@
 				FAC416E5227CB7F2006F4110 /* NotificationService.m in Sources */,
 				FAC416AA227C7EB7006F4110 /* ios_final_project_1.xcdatamodeld in Sources */,
 				FAC416DF227C8686006F4110 /* DefinitionModel.m in Sources */,
-				FAC416A4227C7EB7006F4110 /* ViewController.m in Sources */,
+				FAC416A4227C7EB7006F4110 /* SearchViewController.m in Sources */,
 				FAD504962285CD0B00B908A7 /* Assembly.m in Sources */,
-				FAD5048F2285C75600B908A7 /* Presenter.m in Sources */,
+				FAD5048F2285C75600B908A7 /* SearchPresenter.m in Sources */,
 				FAEFE5E1227DD75F0026FDCE /* DefinitionTableViewCell.m in Sources */,
 				FAC416E2227C9658006F4110 /* WordModel.m in Sources */,
 				FAEFE5FC227F60E50026FDCE /* Word+CoreDataClass.m in Sources */,

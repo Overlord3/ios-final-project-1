@@ -1,5 +1,5 @@
 //
-//  Presenter.h
+//  SearchPresenter.h
 //  ios-final-project-1
 //
 //  Created by Александр Плесовских on 10/05/2019.
@@ -8,19 +8,19 @@
 
 
 #import <Foundation/Foundation.h>
-#import "PresenterProtocol.h"
+#import "SearchPresenterProtocol.h"
 #import "CoreDataServiceProtocol.h"
 #import "NetworkServiceProtocol.h"
 #import "NotificationServiceProtocol.h"
-#import "ViewProtocol.h"
+#import "SearchViewProtocol.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
 
-@interface Presenter : NSObject<PresenterProtocol, NetworkServiceOutputProtocol>
+@interface SearchPresenter : NSObject<SearchPresenterProtocol, NetworkServiceOutputProtocol>
 
-@property(nonatomic, weak) id<ViewProtocol> view; /**< Вью, держит weak, так как вью держит презентер strong ссылкой */
+@property(nonatomic, weak) id<SearchViewProtocol> view; /**< Вью, держит weak, так как вью держит презентер strong ссылкой */
 
 @property (nonatomic, strong) id<NotiticationServiceProtocol> notificationService; /**< Сервис для уведомлений */
 @property (nonatomic, strong) id<NetworkServiceInputProtocol> networkService; /**< Сервис для взаимодействия с сетью */

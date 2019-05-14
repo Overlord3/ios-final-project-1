@@ -8,8 +8,8 @@
 
 
 #import "Assembly.h"
-#import "ViewController.h"
-#import "Presenter.h"
+#import "SearchViewController.h"
+#import "SearchPresenter.h"
 #import "CoreDataService.h"
 #import "NetworkService.h"
 #import "NotificationService.h"
@@ -51,8 +51,8 @@
  */
 - (UIViewController *) assemblySearchScreen
 {
-	ViewController *viewController = [ViewController new];
-	Presenter *presenter = [Presenter new];
+	SearchViewController *viewController = [SearchViewController new];
+	SearchPresenter *presenter = [SearchPresenter new];
 	NetworkService *networkService = [NetworkService initService];
 	CoreDataService *coreDataService = [CoreDataService new];
 	NotificationService *notificationService = [NotificationService new];

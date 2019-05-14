@@ -1,19 +1,19 @@
 //
-//  ViewProtocol.h
+//  SearchViewProtocol.h
 //  ios-final-project-1
 //
 //  Created by Александр Плесовских on 10/05/2019.
 //  Copyright © 2019 Alex. All rights reserved.
 //
 
-#ifndef ViewProtocol_h
-#define ViewProtocol_h
+#ifndef SearchViewProtocol_h
+#define SearchViewProtocol_h
 
 
 #import "WordModel.h"
 
 
-@protocol ViewProtocol <NSObject>
+@protocol SearchViewProtocol <NSObject>
 
 /**
  Возвращает данные в контроллер, когда запрос выполнен
@@ -32,4 +32,4 @@
 
 @end
 
-#endif /* ViewProtocol_h */
+#endif /* SearchViewProtocol_h */

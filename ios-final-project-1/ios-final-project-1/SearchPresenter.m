@@ -1,5 +1,5 @@
 //
-//  Presenter.m
+//  SearchPresenter.m
 //  ios-final-project-1
 //
 //  Created by Александр Плесовских on 10/05/2019.
@@ -7,17 +7,17 @@
 //
 
 
-#import "Presenter.h"
+#import "SearchPresenter.h"
 
 
-@interface Presenter ()
+@interface SearchPresenter ()
 
 @property (nonatomic, strong) NSString *previousRequest; /**< Предыдущий запрос, нужен для уведомлений */
 
 @end
 
 
-@implementation Presenter
+@implementation SearchPresenter
 
 
 - (void)searchWithText:(NSString *)searchText

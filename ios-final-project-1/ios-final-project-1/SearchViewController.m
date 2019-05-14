@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  SearchViewController.m
 //  ios-final-project-1
 //
 //  Created by Александр Плесовских on 03/05/2019.
@@ -7,11 +7,11 @@
 //
 
 
-#import "ViewController.h"
+#import "SearchViewController.h"
 #import "DefinitionTableViewCell.h"
 
 
-@interface ViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface SearchViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UISearchBar *searchBar;
@@ -21,7 +21,7 @@
 @end
 
 
-@implementation ViewController
+@implementation SearchViewController
 
 - (void)viewDidLoad
 {
