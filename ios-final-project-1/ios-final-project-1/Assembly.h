@@ -15,6 +15,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Assembly : NSObject
 
+/**
+ Собирает таббар контроллер со всеми контроллерами
+ 
+ @return таббар контроллер для window
+ */
+- (UIViewController *) assemblyTabbarController;
+
+/**
+ Собирает архитектуру MVP,
+ 
+ @return Возвращает контроллер для экрана поиска
+ */
 - (UIViewController *) assemblySearchScreen;
 
 @end

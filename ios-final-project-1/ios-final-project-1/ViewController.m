@@ -51,7 +51,7 @@
 	self.searchBar.delegate = self;
 	[self.view addSubview:self.searchBar];
 	
-	self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.searchBar.frame), screenWidth, screenHeight - searchBarHeight) style:UITableViewStylePlain];
+	self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.searchBar.frame), screenWidth, screenHeight - searchBarHeight - topInset) style:UITableViewStylePlain];
 	self.tableView.dataSource = self;
 	self.tableView.delegate = self;
 	
@@ -143,6 +143,5 @@
 	
 	[self presentViewController:alertController animated:true completion:nil];
 }
-
 
 @end

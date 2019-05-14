@@ -21,8 +21,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
+	//Обьект, отвечающий за сборку архитектуры MVP
 	Assembly *assembly = [Assembly new];
-	UIViewController *rootViewController = [assembly assemblySearchScreen];
+	UIViewController *rootViewController = [assembly assemblyTabbarController];
 	
 	self.window = [UIWindow new];
 	[self.window setRootViewController:rootViewController];

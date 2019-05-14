@@ -19,9 +19,35 @@
 
 
 /**
+ Собирает таббар контроллер со всеми контроллерами
+
+ @return таббар контроллер для window
+ */
+- (UIViewController *) assemblyTabbarController
+{
+	UIViewController *searchViewController = [self assemblySearchScreen];
+	searchViewController.tabBarItem.image = [UIImage imageNamed:@"TabbarSearch"];
+	searchViewController.tabBarItem.title = @"Поиск определений слов";
+	
+	UIViewController *searchViewController2 = [self assemblySearchScreen];
+	searchViewController2.tabBarItem.image = [UIImage imageNamed:@"TabbarDictionary"];
+	searchViewController2.tabBarItem.title = @"Словарь";
+	
+	NSArray *viewControllerArray = @[searchViewController, searchViewController2];
+	
+	UITabBarController *tabBarViewController = [UITabBarController new];
+	tabBarViewController.tabBar.translucent = YES;
+	
+	tabBarViewController.viewControllers = viewControllerArray;
+	tabBarViewController.selectedIndex = 0;
+	
+	return tabBarViewController;
+}
+
+/**
  Собирает архитектуру MVP,
 
- @return Возвращает рутконтроллер для window
+ @return Возвращает контроллер для экрана поиска
  */
 - (UIViewController *) assemblySearchScreen
 {
