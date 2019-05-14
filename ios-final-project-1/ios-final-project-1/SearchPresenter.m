@@ -66,7 +66,7 @@
 	{
 		//Сформируем и отправим
 		NSString *title = [NSString stringWithFormat:@"Вы давно не смотрели определение слова - %@!", self.previousRequest];
-		[self.notificationService sendLocalNotificationAfterSeconds:10 withTitle:title andSearchText: self.previousRequest];
+		[self.notificationService sendLocalNotificationAfterSeconds:10 withTitle:title andText:self.previousRequest];
 		//Перезапишем предыдущий запрос
 		self.previousRequest = searchText;
 	}

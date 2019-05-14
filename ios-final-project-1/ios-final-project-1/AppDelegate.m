@@ -9,19 +9,22 @@
 
 #import "AppDelegate.h"
 #import "Assembly.h"
+#import <UserNotifications/UserNotifications.h>
 
 
-@interface AppDelegate ()
+@interface AppDelegate () <UNUserNotificationCenterDelegate>
 
 @end
 
 
 @implementation AppDelegate
 
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+	//Локальные пуш-уведомления
+	[self prepareForNotifications];
 	
-	//Обьект, отвечающий за сборку архитектуры MVP
+	//Обьект, отвечающий за сборку контроллеров по архитектуре MVP
 	Assembly *assembly = [Assembly new];
 	UIViewController *rootViewController = [assembly assemblyTabbarController];
 	
@@ -106,6 +109,43 @@
         NSLog(@"Unresolved error %@, %@", error, error.userInfo);
         abort();
     }
+}
+
+
+#pragma LocalNotifications
+
+- (void) prepareForNotifications
+{
+	// Получаем текущий notificationCenter
+	UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+	
+	// Устанавливаем делегат
+	center.delegate = self;
+	
+	// Указываем тип пушей для работы
+	UNAuthorizationOptions options = UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge;
+	
+	// Запрашиваем доступ на работу с пушами
+	[center requestAuthorizationWithOptions:options
+						  completionHandler:^(BOOL granted, NSError * _Nullable error) {
+							  if (!granted)
+							  {
+								  NSLog(@"Доступ не дали");
+							  }
+						  }];
+}
+
+
+#pragma mark - UNUserNotificationCenterDelegate
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+	   willPresentNotification:(UNNotification *)notification
+		 withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
+{
+	if (completionHandler)
+	{
+		completionHandler(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge);
+	}
 }
 
 @end

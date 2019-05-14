@@ -9,6 +9,7 @@
 #ifndef NotificationServiceProtocol_h
 #define NotificationServiceProtocol_h
 
+
 @protocol NotiticationServiceProtocol <NSObject>
 
 /**
@@ -16,9 +17,9 @@
  
  @param seconds Через сколько секунд срабатывание уведомления
  @param title Заголовок уведомления
- @param searchText Текст для поиска в userData уведомления
+ @param text Текст для уведомления
  */
-- (void) sendLocalNotificationAfterSeconds:(NSInteger)seconds withTitle:(NSString *)title andSearchText:(NSString *)searchText;
+- (void) sendLocalNotificationAfterSeconds:(NSInteger)seconds withTitle:(NSString *)title andText:(NSString *)text;
 
 @end
 

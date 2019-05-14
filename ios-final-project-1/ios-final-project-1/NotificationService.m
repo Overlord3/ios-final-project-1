@@ -21,12 +21,12 @@ static NSString * const identifierForActions = @"AIPcategory";
  
  @param seconds Через сколько секунд срабатывание уведомления
  @param title Заголовок уведомления
- @param searchText Текст для поиска в userData уведомления
+ @param text Текст для уведомления
  */
-- (void) sendLocalNotificationAfterSeconds:(NSInteger)seconds withTitle:(NSString *)title andSearchText:(NSString *)searchText
+- (void) sendLocalNotificationAfterSeconds:(NSInteger)seconds withTitle:(NSString *)title andText:(NSString *)text
 {
 	// Создадим Notification Request с контентом и триггером и отправим
-	[self scheduleLocalNotificationAfterSeconds:seconds withTitle:title andSearchText:searchText];
+	[self scheduleLocalNotificationAfterSeconds:seconds withTitle:title andText:text];
 	// Добавим действия к этой категории
 	[self addCustomActions];
 }
@@ -36,9 +36,9 @@ static NSString * const identifierForActions = @"AIPcategory";
  
  @param seconds Через сколько секунд срабатывание уведомления
  @param title Заголовок уведомления
- @param searchText Текст для поиска в userData уведомления
+ @param text Текст для уведомления
  */
-- (void)scheduleLocalNotificationAfterSeconds:(NSInteger)seconds withTitle:(NSString *)title andSearchText:(NSString *)searchText
+- (void)scheduleLocalNotificationAfterSeconds:(NSInteger)seconds withTitle:(NSString *)title andText:(NSString *)text
 {
 	/* Контент - сущность класса UNMutableNotificationContent
 	 Содержит в себе:
@@ -57,7 +57,7 @@ static NSString * const identifierForActions = @"AIPcategory";
 	content.sound = [UNNotificationSound defaultSound];
 	
 	NSDictionary *dict = @{
-						   @"searchRequest": searchText
+						   @"text": text
 						   };
 	content.userInfo = dict;
 	
