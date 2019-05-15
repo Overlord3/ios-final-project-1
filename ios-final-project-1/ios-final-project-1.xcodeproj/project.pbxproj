@@ -21,6 +21,9 @@
 		FAC416E5227CB7F2006F4110 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416E4227CB7F2006F4110 /* NotificationService.m */; };
 		FAD5048F2285C75600B908A7 /* SearchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD5048E2285C75600B908A7 /* SearchPresenter.m */; };
 		FAD504962285CD0B00B908A7 /* Assembly.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD504952285CD0B00B908A7 /* Assembly.m */; };
+		FAD504D3228BD07E00B908A7 /* DictionaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD504D2228BD07E00B908A7 /* DictionaryViewController.m */; };
+		FAD504D6228BD09000B908A7 /* DictionaryPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD504D5228BD09000B908A7 /* DictionaryPresenter.m */; };
+		FAD504DC228BDE1000B908A7 /* WordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD504DB228BDE1000B908A7 /* WordTableViewCell.m */; };
 		FAEFE5E1227DD75F0026FDCE /* DefinitionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5E0227DD75F0026FDCE /* DefinitionTableViewCell.m */; };
 		FAEFE5F3227F5CE60026FDCE /* CoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5F2227F5CE60026FDCE /* CoreDataService.m */; };
 		FAEFE5FC227F60E50026FDCE /* Word+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5F6227F60E50026FDCE /* Word+CoreDataClass.m */; };
@@ -80,6 +83,14 @@
 		FAD504952285CD0B00B908A7 /* Assembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Assembly.m; sourceTree = "<group>"; };
 		FAD504972285D16600B908A7 /* CoreDataServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataServiceProtocol.h; sourceTree = "<group>"; };
 		FAD5049A2285D2F800B908A7 /* NotificationServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationServiceProtocol.h; sourceTree = "<group>"; };
+		FAD504D1228BD07E00B908A7 /* DictionaryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryViewController.h; sourceTree = "<group>"; };
+		FAD504D2228BD07E00B908A7 /* DictionaryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictionaryViewController.m; sourceTree = "<group>"; };
+		FAD504D4228BD09000B908A7 /* DictionaryPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryPresenter.h; sourceTree = "<group>"; };
+		FAD504D5228BD09000B908A7 /* DictionaryPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictionaryPresenter.m; sourceTree = "<group>"; };
+		FAD504D7228BD0A000B908A7 /* DictionaryPresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryPresenterProtocol.h; sourceTree = "<group>"; };
+		FAD504D8228BD0AF00B908A7 /* DictionaryViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryViewProtocol.h; sourceTree = "<group>"; };
+		FAD504DA228BDE1000B908A7 /* WordTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordTableViewCell.h; sourceTree = "<group>"; };
+		FAD504DB228BDE1000B908A7 /* WordTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordTableViewCell.m; sourceTree = "<group>"; };
 		FAEFE5DF227DD75F0026FDCE /* DefinitionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefinitionTableViewCell.h; sourceTree = "<group>"; };
 		FAEFE5E0227DD75F0026FDCE /* DefinitionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefinitionTableViewCell.m; sourceTree = "<group>"; };
 		FAEFE5F1227F5CE60026FDCE /* CoreDataService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataService.h; sourceTree = "<group>"; };
@@ -259,6 +270,7 @@
 		FAD504CE228B215D00B908A7 /* DictionaryScreen */ = {
 			isa = PBXGroup;
 			children = (
+				FAD504D9228BDDF400B908A7 /* TableViewCell */,
 				FAD504D0228B44E800B908A7 /* DictionaryPresenter */,
 				FAD504CF228B44DD00B908A7 /* DictionaryView */,
 			);
@@ -268,6 +280,9 @@
 		FAD504CF228B44DD00B908A7 /* DictionaryView */ = {
 			isa = PBXGroup;
 			children = (
+				FAD504D8228BD0AF00B908A7 /* DictionaryViewProtocol.h */,
+				FAD504D1228BD07E00B908A7 /* DictionaryViewController.h */,
+				FAD504D2228BD07E00B908A7 /* DictionaryViewController.m */,
 			);
 			name = DictionaryView;
 			sourceTree = "<group>";
@@ -275,8 +290,20 @@
 		FAD504D0228B44E800B908A7 /* DictionaryPresenter */ = {
 			isa = PBXGroup;
 			children = (
+				FAD504D7228BD0A000B908A7 /* DictionaryPresenterProtocol.h */,
+				FAD504D4228BD09000B908A7 /* DictionaryPresenter.h */,
+				FAD504D5228BD09000B908A7 /* DictionaryPresenter.m */,
 			);
 			name = DictionaryPresenter;
+			sourceTree = "<group>";
+		};
+		FAD504D9228BDDF400B908A7 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAD504DA228BDE1000B908A7 /* WordTableViewCell.h */,
+				FAD504DB228BDE1000B908A7 /* WordTableViewCell.m */,
+			);
+			name = TableViewCell;
 			sourceTree = "<group>";
 		};
 		FAEFE5DE227DD6630026FDCE /* TableViewCell */ = {
@@ -451,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD504DC228BDE1000B908A7 /* WordTableViewCell.m in Sources */,
 				FAEFE605227F63040026FDCE /* Definition+CoreDataProperties.m in Sources */,
 				FAC416E5227CB7F2006F4110 /* NotificationService.m in Sources */,
 				FAC416AA227C7EB7006F4110 /* ios_final_project_1.xcdatamodeld in Sources */,
@@ -458,10 +486,12 @@
 				FAC416A4227C7EB7006F4110 /* SearchViewController.m in Sources */,
 				FAD504962285CD0B00B908A7 /* Assembly.m in Sources */,
 				FAD5048F2285C75600B908A7 /* SearchPresenter.m in Sources */,
+				FAD504D3228BD07E00B908A7 /* DictionaryViewController.m in Sources */,
 				FAEFE5E1227DD75F0026FDCE /* DefinitionTableViewCell.m in Sources */,
 				FAC416E2227C9658006F4110 /* WordModel.m in Sources */,
 				FAEFE5FC227F60E50026FDCE /* Word+CoreDataClass.m in Sources */,
 				FAC416B2227C7EB8006F4110 /* main.m in Sources */,
+				FAD504D6228BD09000B908A7 /* DictionaryPresenter.m in Sources */,
 				FAEFE604227F63040026FDCE /* Definition+CoreDataClass.m in Sources */,
 				FAEFE5FD227F60E50026FDCE /* Word+CoreDataProperties.m in Sources */,
 				FAC416A1227C7EB7006F4110 /* AppDelegate.m in Sources */,

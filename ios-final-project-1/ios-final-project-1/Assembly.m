@@ -8,8 +8,10 @@
 
 
 #import "Assembly.h"
-#import "SearchViewController.h"
 #import "SearchPresenter.h"
+#import "SearchViewController.h"
+#import "DictionaryPresenter.h"
+#import "DictionaryViewController.h"
 #import "CoreDataService.h"
 #import "NetworkService.h"
 #import "NotificationService.h"
@@ -29,11 +31,11 @@
 	searchViewController.tabBarItem.image = [UIImage imageNamed:@"TabbarSearch"];
 	searchViewController.tabBarItem.title = @"Поиск определений слов";
 	
-	UIViewController *searchViewController2 = [self assemblySearchScreen];
-	searchViewController2.tabBarItem.image = [UIImage imageNamed:@"TabbarDictionary"];
-	searchViewController2.tabBarItem.title = @"Словарь";
+	UIViewController *dictionaryViewController = [self assemblyDictionaryScreen];
+	dictionaryViewController.tabBarItem.image = [UIImage imageNamed:@"TabbarDictionary"];
+	dictionaryViewController.tabBarItem.title = @"Словарь";
 	
-	NSArray *viewControllerArray = @[searchViewController, searchViewController2];
+	NSArray *viewControllerArray = @[searchViewController, dictionaryViewController];
 	
 	UITabBarController *tabBarViewController = [UITabBarController new];
 	tabBarViewController.tabBar.translucent = YES;
@@ -63,6 +65,27 @@
 	presenter.notificationService = notificationService;
 	presenter.view = viewController;
 	
+	viewController.presenter = presenter;
+	
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+	
+	return navigationController;
+}
+
+/**
+ Собирает контроллер для словаря по архитектуре MVP
+ 
+ @return Возвращает контроллер для экрана словаря
+ */
+- (UIViewController *) assemblyDictionaryScreen
+{
+	
+	DictionaryViewController *viewController = [DictionaryViewController new];
+	DictionaryPresenter *presenter = [DictionaryPresenter new];
+	CoreDataService *coreDataService = [CoreDataService new];
+	
+	presenter.coreDataService = coreDataService;
+	presenter.view = viewController;
 	viewController.presenter = presenter;
 	
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];

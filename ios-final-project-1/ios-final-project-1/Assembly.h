@@ -29,6 +29,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (UIViewController *) assemblySearchScreen;
 
+/**
+ Собирает архитектуру MVP,
+ 
+ @return Возвращает контроллер для экрана словаря
+ */
+- (UIViewController *) assemblyDictionaryScreen;
+
 @end
 
 NS_ASSUME_NONNULL_END
