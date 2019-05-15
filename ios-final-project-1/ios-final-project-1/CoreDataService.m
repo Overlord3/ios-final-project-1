@@ -87,6 +87,31 @@
 	}
 }
 
+- (NSArray<WordModel *> *)getAllWords
+{
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Word"];
+	
+	NSManagedObjectContext *context = [self getCoreDataContext];
+	
+	NSError *error = nil;
+	NSArray *result = [context executeFetchRequest:fetchRequest error:&error];
+	
+	NSMutableArray *dictionary = [NSMutableArray new];
+	for (Word *word in result)
+	{
+		WordModel *wordModel = [WordModel new];
+		wordModel.word = word.word;
+		for (Definition *definition in [word.definitions allObjects])
+		{
+			DefinitionModel *definitionModel = [DefinitionModel initWithDefinition:definition.definition author:definition.author date:definition.date example:definition.example];
+			[wordModel.definitions addObject:definitionModel];
+		}
+		[dictionary addObject:wordModel];
+	}
+
+	return dictionary;
+}
+
 /**
  Получение контекста кордаты
  Если контекст сохранен, то возвращает из поля, иначе из аппделегата.

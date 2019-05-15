@@ -30,6 +30,13 @@
  */
 - (void)saveWordModel:(WordModel *)wordModel;
 
+/**
+ Получение всех слов с определениями из памяти
+
+ @return массив моделей слов
+ */
+- (NSArray<WordModel *> *)getAllWords;
+
 @end
 
 #endif /* CoreDataServiceProtocol_h */
