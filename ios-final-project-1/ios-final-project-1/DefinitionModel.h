@@ -48,18 +48,42 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSDate *)getDate;
 
 /**
- Метод, для получения текста даты
- 
- @return текст даты, отформатированный
- */
-- (NSString *)getDateText;
-
-/**
  Метод, для получения текста использования
  
  @return текст примера использования
  */
 - (NSString *)getExample;
+
+
+#pragma GetTextForLabel
+
+/**
+ Метод, для получения текста определения для лейбла
+ 
+ @return текст определения
+ */
+- (NSString *)getDefinitionForLabel;
+
+/**
+ Метод, для получения текста даты
+ 
+ @return текст даты, отформатированный
+ */
+- (NSString *)getDateForLabel;
+
+/**
+ Метод, для получения имени автора для лейбла
+ 
+ @return имя автора
+ */
+- (NSString *)getAuthorForLabel;
+
+/**
+ Метод, для получения текста использования для лейбла
+ 
+ @return текст примера использования
+ */
+- (NSString *)getExampleForLabel;
 
 @end
 

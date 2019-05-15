@@ -92,11 +92,10 @@
 	DefinitionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:DefinitionTableViewCell.description forIndexPath:indexPath];
 	
 	DefinitionModel *model = self.wordModel.definitions[indexPath.row];
-	
-	cell.definitionLabel.text = [model getDefinition];
-	cell.exampleLabel.text = [model getExample];
-	cell.authorLabel.text = [model getAuthor];
-	cell.dateLabel.text = [model getDate].description;
+	cell.definitionLabel.text = [model getDefinitionForLabel];
+	cell.exampleLabel.text = [model getExampleForLabel];
+	cell.authorLabel.text = [model getAuthorForLabel];
+	cell.dateLabel.text = [model getDateForLabel];
 	
 	return cell;
 }
@@ -108,10 +107,10 @@
 {
 	DefinitionModel *model = self.wordModel.definitions[indexPath.row];
 	CGFloat height = [DefinitionTableViewCell
-					  calculateHeightWithDefinition:[model getDefinition]
-					  example:[model getExample]
-					  author:[model getAuthor]
-					  date:[model getDate].description];
+					  calculateHeightWithDefinition:[model getDefinitionForLabel]
+					  example:[model getExampleForLabel]
+					  author:[model getAuthorForLabel]
+					  date:[model getDateForLabel]];
 	return height;
 }
 

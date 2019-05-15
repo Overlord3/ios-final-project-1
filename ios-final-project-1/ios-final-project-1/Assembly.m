@@ -58,6 +58,7 @@
 	NotificationService *notificationService = [NotificationService new];
 	
 	presenter.networkService = networkService;
+	networkService.outputDelegate = presenter;
 	presenter.coreDataService = coreDataService;
 	presenter.notificationService = notificationService;
 	presenter.view = viewController;

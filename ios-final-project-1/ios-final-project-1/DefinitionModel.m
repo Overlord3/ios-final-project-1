@@ -48,6 +48,16 @@
  */
 - (NSString *)getDefinition
 {
+	return self.definition;
+}
+
+/**
+ Метод, для получения текста определения для лейбла
+ 
+ @return текст определения
+ */
+- (NSString *)getDefinitionForLabel
+{
 	NSString *definitionText = nil;
 	if (self.definition != nil)
 	{
@@ -62,6 +72,16 @@
  @return имя автора
  */
 - (NSString *)getAuthor
+{
+	return self.author;
+}
+
+/**
+ Метод, для получения имени автора для лейбла
+ 
+ @return имя автора
+ */
+- (NSString *)getAuthorForLabel
 {
 	NSString *authorText = nil;
 	if (self.author != nil)
@@ -86,7 +106,7 @@
  
  @return текст даты, отформатированный
  */
-- (NSString *)getDateText
+- (NSString *)getDateForLabel
 {
 	NSDateFormatter *formatter = [NSDateFormatter new];
 	[formatter setDateFormat:@"yyyy-MM-dd"];
@@ -99,6 +119,16 @@
  @return текст примера использования
  */
 - (NSString *)getExample
+{
+	return self.example;
+}
+
+/**
+ Метод, для получения текста использования для лейбла
+ 
+ @return текст примера использования
+ */
+- (NSString *)getExampleForLabel
 {
 	NSString *exampleText = nil;
 	if (self.example != nil)
