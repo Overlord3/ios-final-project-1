@@ -8,6 +8,7 @@
 
 
 #import "DictionaryPresenter.h"
+#import "DefinitionsViewController.h"
 
 
 @implementation DictionaryPresenter
@@ -28,6 +29,18 @@
 	}];
 	
 	return sortedArray;
+}
+
+/**
+ Отправить сообщение о том, что выбрана ячейка со словом для перехода к этому слову
+ 
+ @param wordModel слово, которое в выбранной ячейке
+ */
+- (void)selectedTableCellWithWord:(WordModel *)wordModel
+{
+	DefinitionsViewController *viewController = [DefinitionsViewController new];
+	viewController.wordModel = wordModel;
+	[self.view pushViewController:viewController];
 }
 
 @end

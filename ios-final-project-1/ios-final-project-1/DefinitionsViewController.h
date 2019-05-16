@@ -16,8 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DefinitionsViewController : UIViewController
 
-- (void) setWordModel:(WordModel *)wordModel;
-
 @property (nonatomic, strong) WordModel *wordModel; /**< Слово с определениями для отображения */
 
 @end

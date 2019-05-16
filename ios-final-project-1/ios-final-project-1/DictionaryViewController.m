@@ -90,9 +90,18 @@
 	return height;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	WordModel *model = self.dictionary[indexPath.row];
+	[self.presenter selectedTableCellWithWord:model];
+}
 
 #pragma ViewProtocol
 
-//Пока ничего тут нет
+- (void)pushViewController:(UIViewController *)viewController
+{
+	[self.navigationController pushViewController:viewController animated:YES];
+}
 
 @end

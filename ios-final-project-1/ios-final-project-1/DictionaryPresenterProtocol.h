@@ -22,6 +22,14 @@
  */
 - (NSArray<WordModel *> *)getDictionary;
 
+
+/**
+ Отправить сообщение о том, что выбрана ячейка со словом для перехода к этому слову
+
+ @param wordModel слово, которое в выбранной ячейке
+ */
+- (void)selectedTableCellWithWord:(WordModel *)wordModel;
+
 @end
 
 #endif /* DictionaryPresenterProtocol_h */
