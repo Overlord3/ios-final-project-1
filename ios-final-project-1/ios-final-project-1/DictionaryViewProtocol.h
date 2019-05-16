@@ -17,12 +17,20 @@
 @protocol DictionaryViewProtocol <NSObject>
 
 /**
+ Показывает алерт с заголовком и сообщением и действием ОК
+ 
+ @param title Заголовок сообщения
+ @param message Текст сообщения
+ */
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
+
+/**
  Добавляет контроллер поверх контроллера словаря
  необходимо для контроллера с определениями
 
  @param viewController вью контроллер
  */
-- (void) pushViewController:(UIViewController *)viewController;
+- (void)pushViewController:(UIViewController *)viewController;
 
 @end
 

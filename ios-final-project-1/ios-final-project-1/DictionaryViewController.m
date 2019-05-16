@@ -111,4 +111,23 @@
 	[self.navigationController pushViewController:viewController animated:YES];
 }
 
+/**
+ Показывает алерт с заголовком и сообщением и действием ОК
+ 
+ @param title Заголовок сообщения
+ @param message Текст сообщения
+ */
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message
+{
+	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+	
+	UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"Ок" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+		[alertController dismissViewControllerAnimated:true completion:nil];
+	}];
+	
+	[alertController addAction:alertAction];
+	
+	[self presentViewController:alertController animated:true completion:nil];
+}
+
 @end
