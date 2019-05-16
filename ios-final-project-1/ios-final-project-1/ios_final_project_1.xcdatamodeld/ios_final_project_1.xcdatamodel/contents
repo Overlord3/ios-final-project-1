@@ -9,10 +9,10 @@
     </entity>
     <entity name="Word" representedClassName="Word" syncable="YES">
         <attribute name="word" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="definitions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Definition" inverseName="word" inverseEntity="Definition" syncable="YES"/>
+        <relationship name="definitions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Definition" inverseName="word" inverseEntity="Definition" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Word" positionX="-63" positionY="-18" width="128" height="75"/>
         <element name="Definition" positionX="-54" positionY="-9" width="128" height="120"/>
+        <element name="Word" positionX="-63" positionY="-18" width="128" height="75"/>
     </elements>
 </model>

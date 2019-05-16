@@ -37,6 +37,13 @@
  */
 - (NSArray<WordModel *> *)getAllWords;
 
+/**
+ Удалить все слова из памяти и вернуть то, что осталось (должен быть пустой массив, если удалилось успешно
+
+ @return заново прочитанный массив после удаления, должен быть пустым в случае успешной операции
+ */
+- (NSArray<WordModel *> *)clearAllWords;
+
 @end
 
 #endif /* CoreDataServiceProtocol_h */

@@ -43,7 +43,6 @@
 	return wordModel;
 }
 
-
 /**
  Получение запроса для поиска слова по полю word
 
@@ -64,10 +63,11 @@
  */
 - (void)saveWordModel:(WordModel *)wordModel
 {
-	//Создание контакта
+	//Создание нового слова
 	Word *word = [NSEntityDescription insertNewObjectForEntityForName:@"Word" inManagedObjectContext:[self getCoreDataContext]];
 	word.word = wordModel.word;
 	
+	//Добавление определений
 	for (DefinitionModel *definitionModel in wordModel.definitions)
 	{
 		Definition *definition = [NSEntityDescription insertNewObjectForEntityForName:@"Definition" inManagedObjectContext:[self getCoreDataContext]];
@@ -79,7 +79,8 @@
 		[word addDefinitionsObject:definition];
 	}
 	NSError *error = nil;
-	//Достаточно только один объект из связанных сохранить, чтобы все сохранились
+	
+	//Сохранение
 	if (![word.managedObjectContext save:&error])
 	{
 		NSLog(@"Не удалось сохранить объект");
@@ -89,12 +90,7 @@
 
 - (NSArray<WordModel *> *)getAllWords
 {
-	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Word"];
-	
-	NSManagedObjectContext *context = [self getCoreDataContext];
-	
-	NSError *error = nil;
-	NSArray *result = [context executeFetchRequest:fetchRequest error:&error];
+	NSArray<Word *> *result = [self readAllEntityWithName:@"Word"];
 	
 	NSMutableArray *dictionary = [NSMutableArray new];
 	for (Word *word in result)
@@ -110,6 +106,43 @@
 	}
 
 	return dictionary;
+}
+
+/**
+ Удалить все слова из памяти и вернуть то, что осталось (должен быть пустой массив, если удалилось успешно
+ 
+ @return заново прочитанный массив после удаления, должен быть пустым в случае успешной операции
+ */
+- (NSArray<WordModel *> *)clearAllWords
+{
+	NSArray<Word *> *objects = [self readAllEntityWithName:@"Word"];
+	NSManagedObjectContext *context = [self getCoreDataContext];
+	
+	for (Word *word in objects)
+	{
+		[context deleteObject:word];
+	}
+	return [self getAllWords];
+}
+
+
+#pragma Вспомогательные методы
+
+/**
+ Получить все сущности из кордаты по названию
+
+ @param name имя сущности
+ @return массив всех сущностей из кордаты
+ */
+- (NSArray *)readAllEntityWithName:(NSString *)name
+{
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:name];
+	
+	NSManagedObjectContext *context = [self getCoreDataContext];
+	
+	NSError *error = nil;
+	NSArray *result = [context executeFetchRequest:fetchRequest error:&error];
+	return result;
 }
 
 /**
