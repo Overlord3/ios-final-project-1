@@ -58,8 +58,8 @@
  */
 - (void)searchDefinitionsForString:(NSString *)searchString;
 {
+	//Пример запроса - http://api.urbandictionary.com/v0/define?term={word}
 	NSString *urlString = [NSString stringWithFormat: @"http://api.urbandictionary.com/v0/define?term=%@", searchString];
-	//http://api.urbandictionary.com/v0/define?term={word}
 	
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
 	[request setURL:[NSURL URLWithString: urlString]];
@@ -97,7 +97,6 @@
 			NSDateFormatter *dateFormatter = [NSDateFormatter new];
 			[dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
 			NSDate *date = [dateFormatter dateFromString:dateString];
-			
 			
 			//Инициализация определения с параметрами
 			DefinitionModel *definition = [DefinitionModel

@@ -10,7 +10,7 @@
 #import "NotificationService.h"
 #import <UserNotifications/UserNotifications.h>
 
-
+///Константа для категории уведомлений
 static NSString * const identifierForActions = @"AIPcategory";
 
 
@@ -92,7 +92,7 @@ static NSString * const identifierForActions = @"AIPcategory";
 }
 
 
-#pragma mark Условия срабатывания, Trigger
+#pragma Условия срабатывания, Trigger
 
 /**
  Создает триггер на уведомление по интервалу, через N секунд
@@ -106,8 +106,7 @@ static NSString * const identifierForActions = @"AIPcategory";
 	return [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:seconds repeats:repeat];
 }
 
-
-#pragma mark Добавление действий к уведомлению, Actions
+#pragma Добавление действий к уведомлению, Actions
 
 /**
  Добавим основные действия:

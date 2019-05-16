@@ -10,6 +10,9 @@
 #define NotificationServiceProtocol_h
 
 
+/**
+ Протокол для сервиса уведомлений, позволяет отправлять локальные пуш-уведомления
+ */
 @protocol NotiticationServiceProtocol <NSObject>
 
 /**

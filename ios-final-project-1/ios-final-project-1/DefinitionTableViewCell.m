@@ -61,7 +61,6 @@
 	expectedLabelSize = [self.exampleLabel sizeThatFits:maximumLabelSize];
 	self.exampleLabel.frame = CGRectMake(border, shift + CGRectGetMaxY(self.definitionLabel.frame), width - border*2, expectedLabelSize.height);
 	[self.contentView addSubview:self.exampleLabel];
-
 	
 	//Лейбл для примера использования
 	self.authorLabel.font = [UIFont systemFontOfSize:15 weight:UIFontWeightLight];

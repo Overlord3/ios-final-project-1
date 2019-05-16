@@ -22,6 +22,11 @@
 
 #pragma SearchPresenterProtocol
 
+/**
+ Отправляет запрос на поиск определений слова
+ 
+ @param searchText Текст для поиска
+ */
 - (void)searchWithText:(NSString *)searchText
 {
 	if (![self checkForEnglishLettersOnlyInText:searchText])

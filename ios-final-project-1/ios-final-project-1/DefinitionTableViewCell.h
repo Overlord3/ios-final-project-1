@@ -20,7 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UILabel *authorLabel; /**< Лейбл для имени автора */
 @property (nonatomic, strong) UILabel *dateLabel; /**< Лейбл для даты */
 
-
 /**
  Функция для вычисления высоты ячейки, на основе параметров
 
