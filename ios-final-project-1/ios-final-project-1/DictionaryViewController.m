@@ -97,8 +97,15 @@
 	[self.presenter selectedTableCellWithWord:model];
 }
 
+
 #pragma ViewProtocol
 
+/**
+ Добавляет контроллер поверх контроллера словаря
+ необходимо для контроллера с определениями
+ 
+ @param viewController вью контроллер
+ */
 - (void)pushViewController:(UIViewController *)viewController
 {
 	[self.navigationController pushViewController:viewController animated:YES];

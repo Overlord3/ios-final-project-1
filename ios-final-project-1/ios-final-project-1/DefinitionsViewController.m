@@ -33,7 +33,6 @@
 	self.title = @"Определения слов";
 }
 
-
 /**
  Инициализация UI
  */
@@ -49,6 +48,7 @@
 	self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, topInset, screenWidth, screenHeight - topInset) style:UITableViewStylePlain];
 	self.tableView.dataSource = self;
 	self.tableView.delegate = self;
+	self.tableView.allowsSelection = NO;
 	
 	[self.view addSubview:self.tableView];
 }

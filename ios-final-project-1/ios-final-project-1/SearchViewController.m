@@ -58,6 +58,7 @@
 	self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.searchBar.frame), screenWidth, screenHeight - searchBarHeight - topInset) style:UITableViewStylePlain];
 	self.tableView.dataSource = self;
 	self.tableView.delegate = self;
+	self.tableView.allowsSelection = NO;
 	
 	[self.view addSubview:self.tableView];
 }
