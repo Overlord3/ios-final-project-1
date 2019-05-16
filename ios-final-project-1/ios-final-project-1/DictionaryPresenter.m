@@ -22,13 +22,20 @@
 {
 	NSArray<WordModel *> *array = [self.coreDataService getAllWords];
 	
-	NSArray<WordModel *> *sortedArray = [array sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2)
+	return [self sortArrayInAlphabetOrder:array];
+}
+
+
+- (NSArray<WordModel *> *)clearDictionary
+{
+	NSArray<WordModel *> *array = [self.coreDataService clearAllWords];
+	if (array.count > 0)
 	{
-		WordModel *left = obj1, *right = obj2;
-		return [left.word caseInsensitiveCompare:right.word];
-	}];
+		[self.view showAlertWithTitle:@"Операция не удалась" message:@"Словарь не был очищен, попробуйте ещё раз"];
+		return [self sortArrayInAlphabetOrder:array];
+	}
 	
-	return sortedArray;
+	return array;
 }
 
 /**
@@ -41,6 +48,25 @@
 	DefinitionsViewController *viewController = [DefinitionsViewController new];
 	viewController.wordModel = wordModel;
 	[self.view pushViewController:viewController];
+}
+
+
+#pragma Вспомогательные функции
+
+/**
+ Сортирует массив слов в алфавитном порядке
+
+ @param wordsArray массив слов для сортировки
+ @return новый массив со словами в алфавитном порядке
+ */
+- (NSArray<WordModel *> *)sortArrayInAlphabetOrder:(NSArray<WordModel *> *)wordsArray
+{
+	NSArray<WordModel *> *sortedArray = [wordsArray sortedArrayUsingComparator: ^NSComparisonResult(WordModel *left, WordModel *right)
+	{
+		return [left.word caseInsensitiveCompare:right.word];
+	}];
+	
+	return sortedArray;
 }
 
 @end

@@ -122,6 +122,14 @@
 	{
 		[context deleteObject:word];
 	}
+	NSError *error = nil;
+	
+	//Сохранение
+	if (![context save:&error])
+	{
+		NSLog(@"Не удалось удалить объекты");
+		NSLog(@"%@, %@", error, error.localizedDescription);
+	}
 	return [self getAllWords];
 }
 

@@ -26,6 +26,7 @@
 {
 	[super viewDidLoad];
 	[self prepareUI];
+	[self prepareNavigationBarAction];
 	[self.tableView registerClass:WordTableViewCell.class forCellReuseIdentifier:WordTableViewCell.description];
 }
 
@@ -55,6 +56,33 @@
 	self.tableView.delegate = self;
 	
 	[self.view addSubview:self.tableView];
+}
+
+- (void)prepareNavigationBarAction
+{
+	UIBarButtonItem *clearDictionaryButton = [[UIBarButtonItem alloc] initWithTitle:@"Очистить" style:UIBarButtonItemStylePlain target:self action:@selector(showActionSheetForClearAction)];
+	self.navigationItem.rightBarButtonItem = clearDictionaryButton;
+}
+
+- (void)showActionSheetForClearAction
+{
+	UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"Очистка словаря" message:@"Вы уверены, что хотите удалить все данные?" preferredStyle:UIAlertControllerStyleActionSheet];
+	
+	[actionSheet addAction:[UIAlertAction actionWithTitle:@"Очистить" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action)
+	{
+		[self dismissViewControllerAnimated:YES completion:nil];
+		// Удаляем все данные
+		self.dictionary = [self.presenter clearDictionary];
+		[self.tableView reloadData];
+	}]];
+	
+	[actionSheet addAction:[UIAlertAction actionWithTitle:@"Отмена" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action)
+	{
+		//Просто убирает алерт
+		[self dismissViewControllerAnimated:YES completion:nil];
+	}]];
+	
+	[self presentViewController:actionSheet animated:YES completion:nil];
 }
 
 
