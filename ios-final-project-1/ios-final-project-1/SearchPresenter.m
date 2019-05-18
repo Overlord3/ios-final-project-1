@@ -12,7 +12,7 @@
 
 @interface SearchPresenter ()
 
-@property (nonatomic, strong) NSString *previousRequest; /**< Предыдущий запрос, нужен для уведомлений */
+@property (nonatomic, nonnull, strong) NSString *previousRequest; /**< Предыдущий запрос, нужен для уведомлений */
 
 @end
 

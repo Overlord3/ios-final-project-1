@@ -18,9 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DictionaryPresenter : NSObject<DictionaryPresenterProtocol>
 
-@property(nonatomic, weak) id<DictionaryViewProtocol> view; /**< Вью, держит weak, так как вью держит презентер strong ссылкой */
+@property(nonatomic, nullable, weak) id<DictionaryViewProtocol> view; /**< Вью, держит weak, так как вью держит презентер strong ссылкой */
 
-@property (nonatomic, strong) id<CoreDataServiceProtocol> coreDataService; /**< Сервис для сохранения данных */
+@property (nonatomic, nonnull, strong) id<CoreDataServiceProtocol> coreDataService; /**< Сервис для сохранения данных */
 
 @end
 

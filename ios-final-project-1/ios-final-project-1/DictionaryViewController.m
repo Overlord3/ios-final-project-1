@@ -13,9 +13,9 @@
 
 @interface DictionaryViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *tableView; /**< UI для отображения результатов поиска */
+@property (nonatomic, nonnull, strong) UITableView *tableView; /**< UI для отображения результатов поиска */
 
-@property (nonatomic, strong) NSArray<WordModel *> *dictionary; /**< Массив слов словаря с определениями для отображения */
+@property (nonatomic, nonnull, strong) NSArray<WordModel *> *dictionary; /**< Массив слов словаря с определениями для отображения */
 
 @end
 

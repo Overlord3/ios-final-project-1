@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CoreDataService : NSObject<CoreDataServiceProtocol>
 
-@property (nonatomic, strong) NSManagedObjectContext *coreDataContext; /**< Контекст для сохранения данных */
+@property (nonatomic, nullable, strong) NSManagedObjectContext *coreDataContext; /**< Контекст для сохранения данных */
 
 @end
 

@@ -23,6 +23,7 @@
 	self = [super init];
 	if (self)
 	{
+		_word = @"";
 		_definitions = [NSMutableArray new];
 	}
 	return self;

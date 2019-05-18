@@ -13,10 +13,10 @@
 
 @interface SearchViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *tableView; /**< UI для отображения результатов поиска */
-@property (nonatomic, strong) UISearchBar *searchBar; /**< UI для строки поиска */
+@property (nonatomic, nonnull, strong) UITableView *tableView; /**< UI для отображения результатов поиска */
+@property (nonatomic, nonnull, strong) UISearchBar *searchBar; /**< UI для строки поиска */
 
-@property (nonatomic, strong) WordModel *wordModel; /**< Слово с определениями для отображения */
+@property (nonatomic, nullable, strong) WordModel *wordModel; /**< Слово с определениями для отображения */
 
 @end
 

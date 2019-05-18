@@ -12,10 +12,10 @@
 
 @interface DefinitionModel ()
 
-@property (nonatomic,copy)NSString *definition; /**< Определение слова */
-@property (nonatomic,copy)NSString *author; /**< Автор определения */
-@property (nonatomic,copy)NSDate *date; /**< Дата определения */
-@property (nonatomic,copy)NSString *example; /**< Пример использования */
+@property (nonatomic, nonnull, copy)NSString *definition; /**< Определение слова */
+@property (nonatomic, nonnull, copy)NSString *author; /**< Автор определения */
+@property (nonatomic, nonnull, copy)NSDate *date; /**< Дата определения */
+@property (nonatomic, nonnull, copy)NSString *example; /**< Пример использования */
 
 @end
 

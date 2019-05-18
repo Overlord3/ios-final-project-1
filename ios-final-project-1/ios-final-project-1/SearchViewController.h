@@ -12,8 +12,13 @@
 #import "SearchPresenterProtocol.h"
 
 
+NS_ASSUME_NONNULL_BEGIN
+
+
 @interface SearchViewController : UIViewController<SearchViewProtocol>
 
-@property(nonatomic, strong) id<SearchPresenterProtocol> presenter; /**< Презентер этого вью */
+@property(nonatomic, nonnull, strong) id<SearchPresenterProtocol> presenter; /**< Презентер этого вью */
 
 @end
+
+NS_ASSUME_NONNULL_END

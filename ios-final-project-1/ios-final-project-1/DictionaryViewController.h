@@ -14,6 +14,6 @@
 
 @interface DictionaryViewController : UIViewController<DictionaryViewProtocol>
 
-@property(nonatomic, strong) id<DictionaryPresenterProtocol> presenter; /**< Презентер этого вью */
+@property(nonatomic, nonnull, strong) id<DictionaryPresenterProtocol> presenter; /**< Презентер этого вью */
 
 @end

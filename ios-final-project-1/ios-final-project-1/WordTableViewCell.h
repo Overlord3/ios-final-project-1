@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WordTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) UILabel *wordLabel; /**< Лейбл для слова */
+@property (nonatomic, nonnull, strong) UILabel *wordLabel; /**< Лейбл для слова */
 
 /**
  Функция для вычисления высоты ячейки, на основе параметров

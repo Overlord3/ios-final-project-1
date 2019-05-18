@@ -15,10 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DefinitionTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) UILabel *definitionLabel; /**< Лейбл для определения слова */
-@property (nonatomic, strong) UILabel *exampleLabel; /**< Лейбл для примеров использования */
-@property (nonatomic, strong) UILabel *authorLabel; /**< Лейбл для имени автора */
-@property (nonatomic, strong) UILabel *dateLabel; /**< Лейбл для даты */
+@property (nonatomic, nonnull, strong) UILabel *definitionLabel; /**< Лейбл для определения слова */
+@property (nonatomic, nonnull, strong) UILabel *exampleLabel; /**< Лейбл для примеров использования */
+@property (nonatomic, nonnull, strong) UILabel *authorLabel; /**< Лейбл для имени автора */
+@property (nonatomic, nonnull, strong) UILabel *dateLabel; /**< Лейбл для даты */
 
 /**
  Функция для вычисления высоты ячейки, на основе параметров

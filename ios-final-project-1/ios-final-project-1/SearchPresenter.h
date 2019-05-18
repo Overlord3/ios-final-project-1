@@ -20,11 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SearchPresenter : NSObject<SearchPresenterProtocol, NetworkServiceOutputProtocol>
 
-@property(nonatomic, weak) id<SearchViewProtocol> view; /**< Вью, держит weak, так как вью держит презентер strong ссылкой */
-
-@property (nonatomic, strong) id<NotiticationServiceProtocol> notificationService; /**< Сервис для уведомлений */
-@property (nonatomic, strong) id<NetworkServiceInputProtocol> networkService; /**< Сервис для взаимодействия с сетью */
-@property (nonatomic, strong) id<CoreDataServiceProtocol> coreDataService; /**< Сервис для сохранения данных */
+@property (nonatomic, nullable, weak) id<SearchViewProtocol> view; /**< Вью, держит weak, так как вью держит презентер strong ссылкой */
+@property (nonatomic, nonnull, strong) id<NotiticationServiceProtocol> notificationService; /**< Сервис для уведомлений */
+@property (nonatomic, nonnull, strong) id<NetworkServiceInputProtocol> networkService; /**< Сервис для взаимодействия с сетью */
+@property (nonatomic, nonnull, strong) id<CoreDataServiceProtocol> coreDataService; /**< Сервис для сохранения данных */
 
 @end
 

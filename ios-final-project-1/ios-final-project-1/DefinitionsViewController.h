@@ -11,13 +11,8 @@
 #import "WordModel.h"
 
 
-NS_ASSUME_NONNULL_BEGIN
-
-
 @interface DefinitionsViewController : UIViewController
 
-@property (nonatomic, strong) WordModel *wordModel; /**< Слово с определениями для отображения */
+@property (nonatomic, nonnull, strong) WordModel *wordModel; /**< Слово с определениями для отображения */
 
 @end
-
-NS_ASSUME_NONNULL_END

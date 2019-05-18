@@ -13,7 +13,7 @@
 
 @interface NetworkService ()
 
-@property (nonatomic, strong) NSURLSession *urlSession; /**< Сессия */
+@property (nonatomic, nonnull, strong) NSURLSession *urlSession; /**< Сессия */
 
 @end
 

@@ -13,7 +13,7 @@
 
 @interface DefinitionsViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *tableView; /**< UI для отображения определений */
+@property (nonatomic, nonnull, strong) UITableView *tableView; /**< UI для отображения определений */
 
 @end
 

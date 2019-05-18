@@ -11,6 +11,9 @@
 #import "NetworkServiceProtocol.h"
 
 
+NS_ASSUME_NONNULL_BEGIN
+
+
 @interface NetworkService : NSObject<NetworkServiceInputProtocol, NSURLSessionDelegate>
 
 /**
@@ -20,6 +23,8 @@
  */
 + (instancetype)initService;
 
-@property (nonatomic, weak) id<NetworkServiceOutputProtocol> outputDelegate; /**< Делегат внешних событий */
+@property (nonatomic, nullable, weak) id<NetworkServiceOutputProtocol> outputDelegate; /**< Делегат внешних событий */
 
 @end
+
+NS_ASSUME_NONNULL_END
