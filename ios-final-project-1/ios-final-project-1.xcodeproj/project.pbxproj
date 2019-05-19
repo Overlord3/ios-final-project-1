@@ -8,29 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		FAC416A1227C7EB7006F4110 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416A0227C7EB7006F4110 /* AppDelegate.m */; };
-		FAC416A4227C7EB7006F4110 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416A3227C7EB7006F4110 /* SearchViewController.m */; };
+		FAC416A4227C7EB7006F4110 /* AIP_SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416A3227C7EB7006F4110 /* AIP_SearchViewController.m */; };
 		FAC416AA227C7EB7006F4110 /* ios_final_project_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC416A8227C7EB7006F4110 /* ios_final_project_1.xcdatamodeld */; };
 		FAC416AC227C7EB8006F4110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC416AB227C7EB8006F4110 /* Assets.xcassets */; };
 		FAC416AF227C7EB8006F4110 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC416AD227C7EB8006F4110 /* LaunchScreen.storyboard */; };
 		FAC416B2227C7EB8006F4110 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416B1227C7EB8006F4110 /* main.m */; };
 		FAC416BC227C7EB8006F4110 /* ios_final_project_1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416BB227C7EB8006F4110 /* ios_final_project_1Tests.m */; };
 		FAC416C7227C7EB8006F4110 /* ios_final_project_1UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416C6227C7EB8006F4110 /* ios_final_project_1UITests.m */; };
-		FAC416DA227C85CD006F4110 /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416D9227C85CD006F4110 /* NetworkService.m */; };
-		FAC416DF227C8686006F4110 /* DefinitionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416DE227C8686006F4110 /* DefinitionModel.m */; };
-		FAC416E2227C9658006F4110 /* WordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416E1227C9658006F4110 /* WordModel.m */; };
-		FAC416E5227CB7F2006F4110 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416E4227CB7F2006F4110 /* NotificationService.m */; };
-		FAD5048F2285C75600B908A7 /* SearchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD5048E2285C75600B908A7 /* SearchPresenter.m */; };
-		FAD504962285CD0B00B908A7 /* Assembly.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD504952285CD0B00B908A7 /* Assembly.m */; };
-		FAD504D3228BD07E00B908A7 /* DictionaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD504D2228BD07E00B908A7 /* DictionaryViewController.m */; };
-		FAD504D6228BD09000B908A7 /* DictionaryPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD504D5228BD09000B908A7 /* DictionaryPresenter.m */; };
-		FAD504DC228BDE1000B908A7 /* WordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD504DB228BDE1000B908A7 /* WordTableViewCell.m */; };
-		FAE7CFCA228D99B300CA7ABA /* DefinitionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE7CFC9228D99B300CA7ABA /* DefinitionsViewController.m */; };
-		FAEFE5E1227DD75F0026FDCE /* DefinitionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5E0227DD75F0026FDCE /* DefinitionTableViewCell.m */; };
-		FAEFE5F3227F5CE60026FDCE /* CoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5F2227F5CE60026FDCE /* CoreDataService.m */; };
-		FAEFE5FC227F60E50026FDCE /* Word+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5F6227F60E50026FDCE /* Word+CoreDataClass.m */; };
-		FAEFE5FD227F60E50026FDCE /* Word+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5F7227F60E50026FDCE /* Word+CoreDataProperties.m */; };
-		FAEFE604227F63040026FDCE /* Definition+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE602227F63040026FDCE /* Definition+CoreDataClass.m */; };
-		FAEFE605227F63040026FDCE /* Definition+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE603227F63040026FDCE /* Definition+CoreDataProperties.m */; };
+		FAC416DA227C85CD006F4110 /* AIP_NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416D9227C85CD006F4110 /* AIP_NetworkService.m */; };
+		FAC416DF227C8686006F4110 /* AIP_DefinitionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416DE227C8686006F4110 /* AIP_DefinitionModel.m */; };
+		FAC416E2227C9658006F4110 /* AIP_WordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416E1227C9658006F4110 /* AIP_WordModel.m */; };
+		FAC416E5227CB7F2006F4110 /* AIP_NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416E4227CB7F2006F4110 /* AIP_NotificationService.m */; };
+		FAD1D1AC22919C4A002A50E3 /* CoreDataService_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD1D1AB22919C4A002A50E3 /* CoreDataService_Tests.m */; };
+		FAD5048F2285C75600B908A7 /* AIP_SearchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD5048E2285C75600B908A7 /* AIP_SearchPresenter.m */; };
+		FAD504962285CD0B00B908A7 /* AIP_Assembly.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD504952285CD0B00B908A7 /* AIP_Assembly.m */; };
+		FAD504D3228BD07E00B908A7 /* AIP_DictionaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD504D2228BD07E00B908A7 /* AIP_DictionaryViewController.m */; };
+		FAD504D6228BD09000B908A7 /* AIP_DictionaryPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD504D5228BD09000B908A7 /* AIP_DictionaryPresenter.m */; };
+		FAD504DC228BDE1000B908A7 /* AIP_WordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD504DB228BDE1000B908A7 /* AIP_WordTableViewCell.m */; };
+		FAE7CFCA228D99B300CA7ABA /* AIP_DefinitionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE7CFC9228D99B300CA7ABA /* AIP_DefinitionsViewController.m */; };
+		FAEFE5E1227DD75F0026FDCE /* AIP_DefinitionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5E0227DD75F0026FDCE /* AIP_DefinitionTableViewCell.m */; };
+		FAEFE5F3227F5CE60026FDCE /* AIP_CoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5F2227F5CE60026FDCE /* AIP_CoreDataService.m */; };
+		FAEFE5FC227F60E50026FDCE /* AIP_Word+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5F6227F60E50026FDCE /* AIP_Word+CoreDataClass.m */; };
+		FAEFE5FD227F60E50026FDCE /* AIP_Word+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE5F7227F60E50026FDCE /* AIP_Word+CoreDataProperties.m */; };
+		FAEFE604227F63040026FDCE /* AIP_Definition+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE602227F63040026FDCE /* AIP_Definition+CoreDataClass.m */; };
+		FAEFE605227F63040026FDCE /* AIP_Definition+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFE603227F63040026FDCE /* AIP_Definition+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +55,8 @@
 		FAC4169C227C7EB7006F4110 /* ios-final-project-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-final-project-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC4169F227C7EB7006F4110 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAC416A0227C7EB7006F4110 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FAC416A2227C7EB7006F4110 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		FAC416A3227C7EB7006F4110 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		FAC416A2227C7EB7006F4110 /* AIP_SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_SearchViewController.h; sourceTree = "<group>"; };
+		FAC416A3227C7EB7006F4110 /* AIP_SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIP_SearchViewController.m; sourceTree = "<group>"; };
 		FAC416A9227C7EB7006F4110 /* ios_final_project_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios_final_project_1.xcdatamodel; sourceTree = "<group>"; };
 		FAC416AB227C7EB8006F4110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAC416AE227C7EB8006F4110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,45 +68,46 @@
 		FAC416C2227C7EB8006F4110 /* ios-final-project-1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-final-project-1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC416C6227C7EB8006F4110 /* ios_final_project_1UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_final_project_1UITests.m; sourceTree = "<group>"; };
 		FAC416C8227C7EB8006F4110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAC416D8227C85CD006F4110 /* NetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
-		FAC416D9227C85CD006F4110 /* NetworkService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkService.m; sourceTree = "<group>"; };
-		FAC416DB227C8648006F4110 /* NetworkServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkServiceProtocol.h; sourceTree = "<group>"; };
-		FAC416DD227C8686006F4110 /* DefinitionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefinitionModel.h; sourceTree = "<group>"; };
-		FAC416DE227C8686006F4110 /* DefinitionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefinitionModel.m; sourceTree = "<group>"; };
-		FAC416E0227C9658006F4110 /* WordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordModel.h; sourceTree = "<group>"; };
-		FAC416E1227C9658006F4110 /* WordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordModel.m; sourceTree = "<group>"; };
-		FAC416E3227CB7F2006F4110 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
-		FAC416E4227CB7F2006F4110 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
-		FAD5048D2285C75600B908A7 /* SearchPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchPresenter.h; sourceTree = "<group>"; };
-		FAD5048E2285C75600B908A7 /* SearchPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchPresenter.m; sourceTree = "<group>"; };
-		FAD504902285C7ED00B908A7 /* SearchPresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchPresenterProtocol.h; sourceTree = "<group>"; };
-		FAD504932285CA5000B908A7 /* SearchViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewProtocol.h; sourceTree = "<group>"; };
-		FAD504942285CD0B00B908A7 /* Assembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Assembly.h; sourceTree = "<group>"; };
-		FAD504952285CD0B00B908A7 /* Assembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Assembly.m; sourceTree = "<group>"; };
-		FAD504972285D16600B908A7 /* CoreDataServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataServiceProtocol.h; sourceTree = "<group>"; };
-		FAD5049A2285D2F800B908A7 /* NotificationServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationServiceProtocol.h; sourceTree = "<group>"; };
-		FAD504D1228BD07E00B908A7 /* DictionaryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryViewController.h; sourceTree = "<group>"; };
-		FAD504D2228BD07E00B908A7 /* DictionaryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictionaryViewController.m; sourceTree = "<group>"; };
-		FAD504D4228BD09000B908A7 /* DictionaryPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryPresenter.h; sourceTree = "<group>"; };
-		FAD504D5228BD09000B908A7 /* DictionaryPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictionaryPresenter.m; sourceTree = "<group>"; };
-		FAD504D7228BD0A000B908A7 /* DictionaryPresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryPresenterProtocol.h; sourceTree = "<group>"; };
-		FAD504D8228BD0AF00B908A7 /* DictionaryViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictionaryViewProtocol.h; sourceTree = "<group>"; };
-		FAD504DA228BDE1000B908A7 /* WordTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordTableViewCell.h; sourceTree = "<group>"; };
-		FAD504DB228BDE1000B908A7 /* WordTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordTableViewCell.m; sourceTree = "<group>"; };
-		FAE7CFC8228D99B300CA7ABA /* DefinitionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefinitionsViewController.h; sourceTree = "<group>"; };
-		FAE7CFC9228D99B300CA7ABA /* DefinitionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefinitionsViewController.m; sourceTree = "<group>"; };
-		FAEFE5DF227DD75F0026FDCE /* DefinitionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefinitionTableViewCell.h; sourceTree = "<group>"; };
-		FAEFE5E0227DD75F0026FDCE /* DefinitionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefinitionTableViewCell.m; sourceTree = "<group>"; };
-		FAEFE5F1227F5CE60026FDCE /* CoreDataService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataService.h; sourceTree = "<group>"; };
-		FAEFE5F2227F5CE60026FDCE /* CoreDataService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataService.m; sourceTree = "<group>"; };
-		FAEFE5F4227F60E50026FDCE /* Word+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Word+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FAEFE5F5227F60E50026FDCE /* Word+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Word+CoreDataClass.h"; sourceTree = "<group>"; };
-		FAEFE5F6227F60E50026FDCE /* Word+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Word+CoreDataClass.m"; sourceTree = "<group>"; };
-		FAEFE5F7227F60E50026FDCE /* Word+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Word+CoreDataProperties.m"; sourceTree = "<group>"; };
-		FAEFE600227F63040026FDCE /* Definition+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Definition+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FAEFE601227F63040026FDCE /* Definition+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Definition+CoreDataClass.h"; sourceTree = "<group>"; };
-		FAEFE602227F63040026FDCE /* Definition+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Definition+CoreDataClass.m"; sourceTree = "<group>"; };
-		FAEFE603227F63040026FDCE /* Definition+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Definition+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FAC416D8227C85CD006F4110 /* AIP_NetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_NetworkService.h; sourceTree = "<group>"; };
+		FAC416D9227C85CD006F4110 /* AIP_NetworkService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIP_NetworkService.m; sourceTree = "<group>"; };
+		FAC416DB227C8648006F4110 /* AIP_NetworkServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_NetworkServiceProtocol.h; sourceTree = "<group>"; };
+		FAC416DD227C8686006F4110 /* AIP_DefinitionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_DefinitionModel.h; sourceTree = "<group>"; };
+		FAC416DE227C8686006F4110 /* AIP_DefinitionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIP_DefinitionModel.m; sourceTree = "<group>"; };
+		FAC416E0227C9658006F4110 /* AIP_WordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_WordModel.h; sourceTree = "<group>"; };
+		FAC416E1227C9658006F4110 /* AIP_WordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIP_WordModel.m; sourceTree = "<group>"; };
+		FAC416E3227CB7F2006F4110 /* AIP_NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_NotificationService.h; sourceTree = "<group>"; };
+		FAC416E4227CB7F2006F4110 /* AIP_NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIP_NotificationService.m; sourceTree = "<group>"; };
+		FAD1D1AB22919C4A002A50E3 /* CoreDataService_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataService_Tests.m; sourceTree = "<group>"; };
+		FAD5048D2285C75600B908A7 /* AIP_SearchPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_SearchPresenter.h; sourceTree = "<group>"; };
+		FAD5048E2285C75600B908A7 /* AIP_SearchPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIP_SearchPresenter.m; sourceTree = "<group>"; };
+		FAD504902285C7ED00B908A7 /* AIP_SearchPresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_SearchPresenterProtocol.h; sourceTree = "<group>"; };
+		FAD504932285CA5000B908A7 /* AIP_SearchViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_SearchViewProtocol.h; sourceTree = "<group>"; };
+		FAD504942285CD0B00B908A7 /* AIP_Assembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_Assembly.h; sourceTree = "<group>"; };
+		FAD504952285CD0B00B908A7 /* AIP_Assembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIP_Assembly.m; sourceTree = "<group>"; };
+		FAD504972285D16600B908A7 /* AIP_CoreDataServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_CoreDataServiceProtocol.h; sourceTree = "<group>"; };
+		FAD5049A2285D2F800B908A7 /* AIP_NotificationServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_NotificationServiceProtocol.h; sourceTree = "<group>"; };
+		FAD504D1228BD07E00B908A7 /* AIP_DictionaryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_DictionaryViewController.h; sourceTree = "<group>"; };
+		FAD504D2228BD07E00B908A7 /* AIP_DictionaryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIP_DictionaryViewController.m; sourceTree = "<group>"; };
+		FAD504D4228BD09000B908A7 /* AIP_DictionaryPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_DictionaryPresenter.h; sourceTree = "<group>"; };
+		FAD504D5228BD09000B908A7 /* AIP_DictionaryPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIP_DictionaryPresenter.m; sourceTree = "<group>"; };
+		FAD504D7228BD0A000B908A7 /* AIP_DictionaryPresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_DictionaryPresenterProtocol.h; sourceTree = "<group>"; };
+		FAD504D8228BD0AF00B908A7 /* AIP_DictionaryViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_DictionaryViewProtocol.h; sourceTree = "<group>"; };
+		FAD504DA228BDE1000B908A7 /* AIP_WordTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_WordTableViewCell.h; sourceTree = "<group>"; };
+		FAD504DB228BDE1000B908A7 /* AIP_WordTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIP_WordTableViewCell.m; sourceTree = "<group>"; };
+		FAE7CFC8228D99B300CA7ABA /* AIP_DefinitionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_DefinitionsViewController.h; sourceTree = "<group>"; };
+		FAE7CFC9228D99B300CA7ABA /* AIP_DefinitionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIP_DefinitionsViewController.m; sourceTree = "<group>"; };
+		FAEFE5DF227DD75F0026FDCE /* AIP_DefinitionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_DefinitionTableViewCell.h; sourceTree = "<group>"; };
+		FAEFE5E0227DD75F0026FDCE /* AIP_DefinitionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIP_DefinitionTableViewCell.m; sourceTree = "<group>"; };
+		FAEFE5F1227F5CE60026FDCE /* AIP_CoreDataService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_CoreDataService.h; sourceTree = "<group>"; };
+		FAEFE5F2227F5CE60026FDCE /* AIP_CoreDataService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIP_CoreDataService.m; sourceTree = "<group>"; };
+		FAEFE5F4227F60E50026FDCE /* AIP_Word+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AIP_Word+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FAEFE5F5227F60E50026FDCE /* AIP_Word+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AIP_Word+CoreDataClass.h"; sourceTree = "<group>"; };
+		FAEFE5F6227F60E50026FDCE /* AIP_Word+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AIP_Word+CoreDataClass.m"; sourceTree = "<group>"; };
+		FAEFE5F7227F60E50026FDCE /* AIP_Word+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AIP_Word+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FAEFE600227F63040026FDCE /* AIP_Definition+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AIP_Definition+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FAEFE601227F63040026FDCE /* AIP_Definition+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AIP_Definition+CoreDataClass.h"; sourceTree = "<group>"; };
+		FAEFE602227F63040026FDCE /* AIP_Definition+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AIP_Definition+CoreDataClass.m"; sourceTree = "<group>"; };
+		FAEFE603227F63040026FDCE /* AIP_Definition+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AIP_Definition+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +160,8 @@
 			children = (
 				FAC4169F227C7EB7006F4110 /* AppDelegate.h */,
 				FAC416A0227C7EB7006F4110 /* AppDelegate.m */,
-				FAD504942285CD0B00B908A7 /* Assembly.h */,
-				FAD504952285CD0B00B908A7 /* Assembly.m */,
+				FAD504942285CD0B00B908A7 /* AIP_Assembly.h */,
+				FAD504952285CD0B00B908A7 /* AIP_Assembly.m */,
 				FAEFE5E2227F5ABB0026FDCE /* CoreData */,
 				FAC416DC227C865E006F4110 /* Model */,
 				FAC416D7227C85A9006F4110 /* ServiceLayer */,
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC416BB227C7EB8006F4110 /* ios_final_project_1Tests.m */,
+				FAD1D1AB22919C4A002A50E3 /* CoreDataService_Tests.m */,
 				FAC416BD227C7EB8006F4110 /* Info.plist */,
 			);
 			path = "ios-final-project-1Tests";
@@ -212,10 +215,10 @@
 		FAC416DC227C865E006F4110 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FAC416E0227C9658006F4110 /* WordModel.h */,
-				FAC416E1227C9658006F4110 /* WordModel.m */,
-				FAC416DD227C8686006F4110 /* DefinitionModel.h */,
-				FAC416DE227C8686006F4110 /* DefinitionModel.m */,
+				FAC416E0227C9658006F4110 /* AIP_WordModel.h */,
+				FAC416E1227C9658006F4110 /* AIP_WordModel.m */,
+				FAC416DD227C8686006F4110 /* AIP_DefinitionModel.h */,
+				FAC416DE227C8686006F4110 /* AIP_DefinitionModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -223,9 +226,9 @@
 		FAD504912285C7FE00B908A7 /* SearchPresenter */ = {
 			isa = PBXGroup;
 			children = (
-				FAD504902285C7ED00B908A7 /* SearchPresenterProtocol.h */,
-				FAD5048D2285C75600B908A7 /* SearchPresenter.h */,
-				FAD5048E2285C75600B908A7 /* SearchPresenter.m */,
+				FAD504902285C7ED00B908A7 /* AIP_SearchPresenterProtocol.h */,
+				FAD5048D2285C75600B908A7 /* AIP_SearchPresenter.h */,
+				FAD5048E2285C75600B908A7 /* AIP_SearchPresenter.m */,
 			);
 			name = SearchPresenter;
 			sourceTree = "<group>";
@@ -233,9 +236,9 @@
 		FAD504922285C80A00B908A7 /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
-				FAD504932285CA5000B908A7 /* SearchViewProtocol.h */,
-				FAC416A2227C7EB7006F4110 /* SearchViewController.h */,
-				FAC416A3227C7EB7006F4110 /* SearchViewController.m */,
+				FAD504932285CA5000B908A7 /* AIP_SearchViewProtocol.h */,
+				FAC416A2227C7EB7006F4110 /* AIP_SearchViewController.h */,
+				FAC416A3227C7EB7006F4110 /* AIP_SearchViewController.m */,
 				FAEFE5DE227DD6630026FDCE /* TableViewCell */,
 			);
 			name = SearchView;
@@ -244,9 +247,9 @@
 		FAD504982285D2DB00B908A7 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
-				FAC416DB227C8648006F4110 /* NetworkServiceProtocol.h */,
-				FAC416D8227C85CD006F4110 /* NetworkService.h */,
-				FAC416D9227C85CD006F4110 /* NetworkService.m */,
+				FAC416DB227C8648006F4110 /* AIP_NetworkServiceProtocol.h */,
+				FAC416D8227C85CD006F4110 /* AIP_NetworkService.h */,
+				FAC416D9227C85CD006F4110 /* AIP_NetworkService.m */,
 			);
 			name = NetworkService;
 			sourceTree = "<group>";
@@ -254,9 +257,9 @@
 		FAD504992285D2E600B908A7 /* NotificationService */ = {
 			isa = PBXGroup;
 			children = (
-				FAD5049A2285D2F800B908A7 /* NotificationServiceProtocol.h */,
-				FAC416E3227CB7F2006F4110 /* NotificationService.h */,
-				FAC416E4227CB7F2006F4110 /* NotificationService.m */,
+				FAD5049A2285D2F800B908A7 /* AIP_NotificationServiceProtocol.h */,
+				FAC416E3227CB7F2006F4110 /* AIP_NotificationService.h */,
+				FAC416E4227CB7F2006F4110 /* AIP_NotificationService.m */,
 			);
 			name = NotificationService;
 			sourceTree = "<group>";
@@ -283,11 +286,11 @@
 		FAD504CF228B44DD00B908A7 /* DictionaryView */ = {
 			isa = PBXGroup;
 			children = (
-				FAD504D8228BD0AF00B908A7 /* DictionaryViewProtocol.h */,
-				FAD504D1228BD07E00B908A7 /* DictionaryViewController.h */,
-				FAD504D2228BD07E00B908A7 /* DictionaryViewController.m */,
-				FAE7CFC8228D99B300CA7ABA /* DefinitionsViewController.h */,
-				FAE7CFC9228D99B300CA7ABA /* DefinitionsViewController.m */,
+				FAD504D8228BD0AF00B908A7 /* AIP_DictionaryViewProtocol.h */,
+				FAD504D1228BD07E00B908A7 /* AIP_DictionaryViewController.h */,
+				FAD504D2228BD07E00B908A7 /* AIP_DictionaryViewController.m */,
+				FAE7CFC8228D99B300CA7ABA /* AIP_DefinitionsViewController.h */,
+				FAE7CFC9228D99B300CA7ABA /* AIP_DefinitionsViewController.m */,
 			);
 			name = DictionaryView;
 			sourceTree = "<group>";
@@ -295,9 +298,9 @@
 		FAD504D0228B44E800B908A7 /* DictionaryPresenter */ = {
 			isa = PBXGroup;
 			children = (
-				FAD504D7228BD0A000B908A7 /* DictionaryPresenterProtocol.h */,
-				FAD504D4228BD09000B908A7 /* DictionaryPresenter.h */,
-				FAD504D5228BD09000B908A7 /* DictionaryPresenter.m */,
+				FAD504D7228BD0A000B908A7 /* AIP_DictionaryPresenterProtocol.h */,
+				FAD504D4228BD09000B908A7 /* AIP_DictionaryPresenter.h */,
+				FAD504D5228BD09000B908A7 /* AIP_DictionaryPresenter.m */,
 			);
 			name = DictionaryPresenter;
 			sourceTree = "<group>";
@@ -305,8 +308,8 @@
 		FAD504D9228BDDF400B908A7 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				FAD504DA228BDE1000B908A7 /* WordTableViewCell.h */,
-				FAD504DB228BDE1000B908A7 /* WordTableViewCell.m */,
+				FAD504DA228BDE1000B908A7 /* AIP_WordTableViewCell.h */,
+				FAD504DB228BDE1000B908A7 /* AIP_WordTableViewCell.m */,
 			);
 			name = TableViewCell;
 			sourceTree = "<group>";
@@ -314,8 +317,8 @@
 		FAEFE5DE227DD6630026FDCE /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				FAEFE5DF227DD75F0026FDCE /* DefinitionTableViewCell.h */,
-				FAEFE5E0227DD75F0026FDCE /* DefinitionTableViewCell.m */,
+				FAEFE5DF227DD75F0026FDCE /* AIP_DefinitionTableViewCell.h */,
+				FAEFE5E0227DD75F0026FDCE /* AIP_DefinitionTableViewCell.m */,
 			);
 			name = TableViewCell;
 			sourceTree = "<group>";
@@ -323,9 +326,9 @@
 		FAEFE5E2227F5ABB0026FDCE /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				FAD504972285D16600B908A7 /* CoreDataServiceProtocol.h */,
-				FAEFE5F1227F5CE60026FDCE /* CoreDataService.h */,
-				FAEFE5F2227F5CE60026FDCE /* CoreDataService.m */,
+				FAD504972285D16600B908A7 /* AIP_CoreDataServiceProtocol.h */,
+				FAEFE5F1227F5CE60026FDCE /* AIP_CoreDataService.h */,
+				FAEFE5F2227F5CE60026FDCE /* AIP_CoreDataService.m */,
 				FAEFE5F0227F5BA80026FDCE /* CoreData_Definition */,
 				FAEFE5EF227F5BA10026FDCE /* CoreData_Word */,
 			);
@@ -335,10 +338,10 @@
 		FAEFE5EF227F5BA10026FDCE /* CoreData_Word */ = {
 			isa = PBXGroup;
 			children = (
-				FAEFE5F5227F60E50026FDCE /* Word+CoreDataClass.h */,
-				FAEFE5F6227F60E50026FDCE /* Word+CoreDataClass.m */,
-				FAEFE5F4227F60E50026FDCE /* Word+CoreDataProperties.h */,
-				FAEFE5F7227F60E50026FDCE /* Word+CoreDataProperties.m */,
+				FAEFE5F5227F60E50026FDCE /* AIP_Word+CoreDataClass.h */,
+				FAEFE5F6227F60E50026FDCE /* AIP_Word+CoreDataClass.m */,
+				FAEFE5F4227F60E50026FDCE /* AIP_Word+CoreDataProperties.h */,
+				FAEFE5F7227F60E50026FDCE /* AIP_Word+CoreDataProperties.m */,
 			);
 			name = CoreData_Word;
 			sourceTree = "<group>";
@@ -346,10 +349,10 @@
 		FAEFE5F0227F5BA80026FDCE /* CoreData_Definition */ = {
 			isa = PBXGroup;
 			children = (
-				FAEFE601227F63040026FDCE /* Definition+CoreDataClass.h */,
-				FAEFE602227F63040026FDCE /* Definition+CoreDataClass.m */,
-				FAEFE600227F63040026FDCE /* Definition+CoreDataProperties.h */,
-				FAEFE603227F63040026FDCE /* Definition+CoreDataProperties.m */,
+				FAEFE601227F63040026FDCE /* AIP_Definition+CoreDataClass.h */,
+				FAEFE602227F63040026FDCE /* AIP_Definition+CoreDataClass.m */,
+				FAEFE600227F63040026FDCE /* AIP_Definition+CoreDataProperties.h */,
+				FAEFE603227F63040026FDCE /* AIP_Definition+CoreDataProperties.m */,
 			);
 			name = CoreData_Definition;
 			sourceTree = "<group>";
@@ -483,26 +486,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAD504DC228BDE1000B908A7 /* WordTableViewCell.m in Sources */,
-				FAE7CFCA228D99B300CA7ABA /* DefinitionsViewController.m in Sources */,
-				FAEFE605227F63040026FDCE /* Definition+CoreDataProperties.m in Sources */,
-				FAC416E5227CB7F2006F4110 /* NotificationService.m in Sources */,
+				FAD504DC228BDE1000B908A7 /* AIP_WordTableViewCell.m in Sources */,
+				FAE7CFCA228D99B300CA7ABA /* AIP_DefinitionsViewController.m in Sources */,
+				FAEFE605227F63040026FDCE /* AIP_Definition+CoreDataProperties.m in Sources */,
+				FAC416E5227CB7F2006F4110 /* AIP_NotificationService.m in Sources */,
 				FAC416AA227C7EB7006F4110 /* ios_final_project_1.xcdatamodeld in Sources */,
-				FAC416DF227C8686006F4110 /* DefinitionModel.m in Sources */,
-				FAC416A4227C7EB7006F4110 /* SearchViewController.m in Sources */,
-				FAD504962285CD0B00B908A7 /* Assembly.m in Sources */,
-				FAD5048F2285C75600B908A7 /* SearchPresenter.m in Sources */,
-				FAD504D3228BD07E00B908A7 /* DictionaryViewController.m in Sources */,
-				FAEFE5E1227DD75F0026FDCE /* DefinitionTableViewCell.m in Sources */,
-				FAC416E2227C9658006F4110 /* WordModel.m in Sources */,
-				FAEFE5FC227F60E50026FDCE /* Word+CoreDataClass.m in Sources */,
+				FAC416DF227C8686006F4110 /* AIP_DefinitionModel.m in Sources */,
+				FAC416A4227C7EB7006F4110 /* AIP_SearchViewController.m in Sources */,
+				FAD504962285CD0B00B908A7 /* AIP_Assembly.m in Sources */,
+				FAD5048F2285C75600B908A7 /* AIP_SearchPresenter.m in Sources */,
+				FAD504D3228BD07E00B908A7 /* AIP_DictionaryViewController.m in Sources */,
+				FAEFE5E1227DD75F0026FDCE /* AIP_DefinitionTableViewCell.m in Sources */,
+				FAC416E2227C9658006F4110 /* AIP_WordModel.m in Sources */,
+				FAEFE5FC227F60E50026FDCE /* AIP_Word+CoreDataClass.m in Sources */,
 				FAC416B2227C7EB8006F4110 /* main.m in Sources */,
-				FAD504D6228BD09000B908A7 /* DictionaryPresenter.m in Sources */,
-				FAEFE604227F63040026FDCE /* Definition+CoreDataClass.m in Sources */,
-				FAEFE5FD227F60E50026FDCE /* Word+CoreDataProperties.m in Sources */,
+				FAD504D6228BD09000B908A7 /* AIP_DictionaryPresenter.m in Sources */,
+				FAEFE604227F63040026FDCE /* AIP_Definition+CoreDataClass.m in Sources */,
+				FAEFE5FD227F60E50026FDCE /* AIP_Word+CoreDataProperties.m in Sources */,
 				FAC416A1227C7EB7006F4110 /* AppDelegate.m in Sources */,
-				FAEFE5F3227F5CE60026FDCE /* CoreDataService.m in Sources */,
-				FAC416DA227C85CD006F4110 /* NetworkService.m in Sources */,
+				FAEFE5F3227F5CE60026FDCE /* AIP_CoreDataService.m in Sources */,
+				FAC416DA227C85CD006F4110 /* AIP_NetworkService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD1D1AC22919C4A002A50E3 /* CoreDataService_Tests.m in Sources */,
 				FAC416BC227C7EB8006F4110 /* ios_final_project_1Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

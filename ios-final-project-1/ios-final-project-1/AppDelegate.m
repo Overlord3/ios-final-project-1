@@ -8,7 +8,7 @@
 
 
 #import "AppDelegate.h"
-#import "Assembly.h"
+#import "AIP_Assembly.h"
 #import <UserNotifications/UserNotifications.h>
 
 
@@ -25,7 +25,7 @@
 	[self prepareForNotifications];
 	
 	//Обьект, отвечающий за сборку контроллеров по архитектуре MVP
-	Assembly *assembly = [Assembly new];
+	AIP_Assembly *assembly = [AIP_Assembly new];
 	UIViewController *rootViewController = [assembly assemblyTabbarController];
 	
 	self.window = [UIWindow new];
