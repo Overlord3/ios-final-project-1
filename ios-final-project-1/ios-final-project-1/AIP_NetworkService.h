@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-@interface AIP_NetworkService : NSObject<NetworkServiceInputProtocol, NSURLSessionDelegate>
+@interface AIP_NetworkService : NSObject<AIP_NetworkServiceInputProtocol, NSURLSessionDelegate>
 
 /**
  Инициализатор сервиса

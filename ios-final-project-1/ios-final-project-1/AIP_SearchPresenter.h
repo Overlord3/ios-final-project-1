@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, nullable, weak) id<AIP_SearchViewProtocol> view; /**< Вью, держит weak, так как вью держит презентер strong ссылкой */
 @property (nonatomic, nonnull, strong) id<AIP_NotificationServiceProtocol> notificationService; /**< Сервис для уведомлений */
-@property (nonatomic, nonnull, strong) id<NetworkServiceInputProtocol> networkService; /**< Сервис для взаимодействия с сетью */
+@property (nonatomic, nonnull, strong) id<AIP_NetworkServiceInputProtocol> networkService; /**< Сервис для взаимодействия с сетью */
 @property (nonatomic, nonnull, strong) id<AIP_CoreDataServiceProtocol> coreDataService; /**< Сервис для сохранения данных */
 
 @end

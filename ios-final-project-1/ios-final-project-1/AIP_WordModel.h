@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AIP_WordModel : NSObject
 
 @property (nonatomic, nonnull, strong)NSString *word; /**< Основное слово */
-@property (nonatomic, nonnull, strong)NSMutableArray<AIP_DefinitionModel *> *definitions; /**< Массив определений для слова */
+@property (nonatomic, nonnull, copy)NSMutableArray<AIP_DefinitionModel *> *definitions; /**< Массив определений для слова */
 
 @end
 

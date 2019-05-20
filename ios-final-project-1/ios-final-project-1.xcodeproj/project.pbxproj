@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA3D391622932AB00089D694 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF8B15C2293082C001DD424 /* OCMock.framework */; };
+		FA3D391722932B380089D694 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FAF8B15C2293082C001DD424 /* OCMock.framework */; };
+		FA3D391A22932FB60089D694 /* NetworkOutputProtocolImpForTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3D391922932FB60089D694 /* NetworkOutputProtocolImpForTest.m */; };
 		FAC416A1227C7EB7006F4110 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416A0227C7EB7006F4110 /* AppDelegate.m */; };
 		FAC416A4227C7EB7006F4110 /* AIP_SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416A3227C7EB7006F4110 /* AIP_SearchViewController.m */; };
 		FAC416AA227C7EB7006F4110 /* ios_final_project_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC416A8227C7EB7006F4110 /* ios_final_project_1.xcdatamodeld */; };
@@ -52,7 +55,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FAF8B15A2292FADB001DD424 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				FA3D391722932B380089D694 /* OCMock.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		FA3D391822932FB60089D694 /* NetworkOutputProtocolImpForTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkOutputProtocolImpForTest.h; sourceTree = "<group>"; };
+		FA3D391922932FB60089D694 /* NetworkOutputProtocolImpForTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkOutputProtocolImpForTest.m; sourceTree = "<group>"; };
 		FAC4169C227C7EB7006F4110 /* ios-final-project-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-final-project-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC4169F227C7EB7006F4110 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAC416A0227C7EB7006F4110 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -110,6 +128,7 @@
 		FAEFE601227F63040026FDCE /* AIP_Definition+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AIP_Definition+CoreDataClass.h"; sourceTree = "<group>"; };
 		FAEFE602227F63040026FDCE /* AIP_Definition+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AIP_Definition+CoreDataClass.m"; sourceTree = "<group>"; };
 		FAEFE603227F63040026FDCE /* AIP_Definition+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AIP_Definition+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FAF8B15C2293082C001DD424 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3D391622932AB00089D694 /* OCMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +157,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA3D391B22932FB90089D694 /* ClassesForTest */ = {
+			isa = PBXGroup;
+			children = (
+				FA3D391822932FB60089D694 /* NetworkOutputProtocolImpForTest.h */,
+				FA3D391922932FB60089D694 /* NetworkOutputProtocolImpForTest.m */,
+			);
+			name = ClassesForTest;
+			sourceTree = "<group>";
+		};
 		FAC41693227C7EB7006F4110 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +173,7 @@
 				FAC416BA227C7EB8006F4110 /* ios-final-project-1Tests */,
 				FAC416C5227C7EB8006F4110 /* ios-final-project-1UITests */,
 				FAC4169D227C7EB7006F4110 /* Products */,
+				FAF8B1572292FAC0001DD424 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,6 +210,7 @@
 		FAC416BA227C7EB8006F4110 /* ios-final-project-1Tests */ = {
 			isa = PBXGroup;
 			children = (
+				FA3D391B22932FB90089D694 /* ClassesForTest */,
 				FAC416BB227C7EB8006F4110 /* ios_final_project_1Tests.m */,
 				FAD1D1AB22919C4A002A50E3 /* CoreDataService_Tests.m */,
 				FAD1D1AD2292F475002A50E3 /* NetworkService_Tests.m */,
@@ -360,6 +391,14 @@
 			name = CoreData_Definition;
 			sourceTree = "<group>";
 		};
+		FAF8B1572292FAC0001DD424 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAF8B15C2293082C001DD424 /* OCMock.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -387,6 +426,7 @@
 				FAC416B3227C7EB8006F4110 /* Sources */,
 				FAC416B4227C7EB8006F4110 /* Frameworks */,
 				FAC416B5227C7EB8006F4110 /* Resources */,
+				FAF8B15A2292FADB001DD424 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -518,6 +558,7 @@
 			files = (
 				FAD1D1AE2292F475002A50E3 /* NetworkService_Tests.m in Sources */,
 				FAD1D1AC22919C4A002A50E3 /* CoreDataService_Tests.m in Sources */,
+				FA3D391A22932FB60089D694 /* NetworkOutputProtocolImpForTest.m in Sources */,
 				FAC416BC227C7EB8006F4110 /* ios_final_project_1Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,6 +750,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68RG3R5754;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "ios-final-project-1Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -728,6 +773,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68RG3R5754;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "ios-final-project-1Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

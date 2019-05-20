@@ -30,7 +30,7 @@
 /**
  Протокол для функций сервиса
  */
-@protocol NetworkServiceInputProtocol <NSObject>
+@protocol AIP_NetworkServiceInputProtocol <NSObject>
 
 /**
  Поиск определений слов в сервисе

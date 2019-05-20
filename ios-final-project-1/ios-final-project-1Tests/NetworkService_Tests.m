@@ -10,6 +10,7 @@
 #import <XCTest/XCTest.h>
 #import "AIP_NetworkService.h"
 #import "AIP_NetworkServiceProtocol.h"
+#import "NetworkOutputProtocolImpForTest.h"
 @import OCMock;
 
 
@@ -38,24 +39,29 @@
 - (void)testSearchWord_Success
 {
 //	// Тест кейс
-	id outputProtocol = OCMProtocolMock(@protocol(AIP_NetworkServiceOutputProtocol));
-//
-//	OCMStub([outputProtocol searchingFinishedWithWord:[OCMArg anyPointer]]);
-//
-////	[[[outputProtocol stub] andCall:@selector(searchFinished:) onObject:self] searchingFinishedWithWord:(AIP_WordModel *) [OCMArg any]];
-//	self.networkService.outputDelegate = outputProtocol;
-//
+//	NetworkOutputProtocolImpForTest *delegate = [NetworkOutputProtocolImpForTest new];
+//	self.networkService.outputDelegate = delegate;
 //	NSString *request = @"test";
 //	[self.networkService searchDefinitionsForString:request];
 //
+//	while (delegate.wordModel == nil)
+//	{
+//
+//	}
+////	for (int i=0; i<10; i++)
+////	{
+////		if (delegate.wordModel != nil)
+////		{
+////			break;
+////		}
+////		[NSThread sleepForTimeInterval:1.0f];
+////	}
+//
 //	// Проверка результатов
-//	//XCTAssert(array.count == 0);
+//	XCTAssert(delegate.wordModel != nil);
+//	XCTAssert([delegate.wordModel.word isEqualToString:request]);
+//	XCTAssert(delegate.wordModel.definitions.count > 0);
 }
 
-- (AIP_WordModel *)searchFinished:(AIP_WordModel *)model
-{
-	NSLog(@"here!");
-	return model;
-}
 
 @end
