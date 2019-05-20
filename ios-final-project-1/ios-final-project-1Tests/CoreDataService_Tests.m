@@ -22,8 +22,9 @@
 
 - (void)setUp
 {
-	// Инициализация сервиса
+	// Инициализация сервиса и удаление всех значений
 	self.coreDataService = [AIP_CoreDataService new];
+	[self.coreDataService clearAllWords];
 }
 
 - (void)tearDown
@@ -182,6 +183,93 @@
 	AIP_WordModel *searchedModel = [self.coreDataService findWordWithSearchString:@"name-2"];
 	// Проверка результатов
 	XCTAssert(searchedModel == nil);
+}
+
+- (void)testDeleteWord_1
+{
+	// Тест кейс - Создаем модель, сохраняем, удаляем, загружаем
+	NSString *modelName1 = @"name-1";
+	AIP_WordModel *wordModel1 = [AIP_WordModel new];
+	wordModel1.word = modelName1;
+	[self.coreDataService saveWordModel:wordModel1];
+	
+	NSArray<AIP_WordModel *> *array = [self.coreDataService getAllWords];
+	AIP_WordModel *loadedModel1 = array[0];
+	
+	// Проверка результатов
+	XCTAssert(array.count == 1);
+	XCTAssert([loadedModel1.word isEqualToString:modelName1]);
+	
+	// Теперь удаляем
+	[self.coreDataService deleteWordWithText:modelName1];
+	
+	// Снова проверяем
+	array = [self.coreDataService getAllWords];
+	XCTAssert(array.count == 0);
+}
+
+- (void)testDeleteWord_2
+{
+	// Тест кейс - Создаем модель, сохраняем, удаляем, загружаем
+	NSString *modelName1 = @"name-1";
+	AIP_WordModel *wordModel1 = [AIP_WordModel new];
+	wordModel1.word = modelName1;
+	[self.coreDataService saveWordModel:wordModel1];
+	
+	NSString *modelName2 = @"name-2";
+	AIP_WordModel *wordModel2 = [AIP_WordModel new];
+	wordModel2.word = modelName2;
+	[self.coreDataService saveWordModel:wordModel2];
+	
+	NSArray<AIP_WordModel *> *array = [self.coreDataService getAllWords];
+	AIP_WordModel *loadedModel1 = array[0];
+	AIP_WordModel *loadedModel2 = array[1];
+	// Проверка результатов
+	XCTAssert(array.count == 2);
+	XCTAssert([loadedModel1.word isEqualToString:modelName1]
+			  && [loadedModel2.word isEqualToString:modelName2]
+			  ||
+			  [loadedModel2.word isEqualToString:modelName1]
+			  && [loadedModel1.word isEqualToString:modelName2]);
+	
+	// Теперь удаляем 2-е слово
+	[self.coreDataService deleteWordWithText:modelName2];
+	// Проверяем
+	array = [self.coreDataService getAllWords];
+	loadedModel1 = array[0];
+	XCTAssert(array.count == 1);
+	XCTAssert([loadedModel1.word isEqualToString:modelName1]);
+	
+	// Теперь удаляем 1-е слово
+	[self.coreDataService deleteWordWithText:modelName1];
+	
+	// Снова проверяем
+	array = [self.coreDataService getAllWords];
+	XCTAssert(array.count == 0);
+}
+
+- (void)testDeleteWordFail
+{
+	// Тест кейс - Создаем модель, сохраняем, удаляем, загружаем
+	NSString *modelName1 = @"name-1";
+	AIP_WordModel *wordModel1 = [AIP_WordModel new];
+	wordModel1.word = modelName1;
+	[self.coreDataService saveWordModel:wordModel1];
+	
+	NSArray<AIP_WordModel *> *array = [self.coreDataService getAllWords];
+	AIP_WordModel *loadedModel1 = array[0];
+	
+	// Проверка результатов
+	XCTAssert(array.count == 1);
+	XCTAssert([loadedModel1.word isEqualToString:modelName1]);
+	
+	// Теперь удаляем с другим именем
+	NSString *anotherName = @"anotherName";
+	[self.coreDataService deleteWordWithText:anotherName];
+	
+	// Проверка результатов
+	XCTAssert(array.count == 1);
+	XCTAssert([loadedModel1.word isEqualToString:modelName1]);
 }
 
 @end

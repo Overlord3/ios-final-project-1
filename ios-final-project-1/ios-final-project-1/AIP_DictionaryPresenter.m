@@ -50,6 +50,15 @@
 	[self.view pushViewController:viewController];
 }
 
+/**
+ Удалить слово по тексту
+ 
+ @param text текст слова
+ */
+- (void)deleteWordWithText:(NSString *)text
+{
+	[self.coreDataService deleteWordWithText:text];
+}
 
 #pragma Вспомогательные функции
 

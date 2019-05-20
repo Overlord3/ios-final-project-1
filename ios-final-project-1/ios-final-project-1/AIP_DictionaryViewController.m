@@ -126,6 +126,25 @@
 }
 
 
+#pragma UITableViewDelegate delete rows
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	if (editingStyle == UITableViewCellEditingStyleDelete)
+	{
+		// Отправляет презентеру запрос на удаление слова
+		[self.presenter deleteWordWithText:self.dictionary[indexPath.row].word];
+		// Получает измененный словарь
+		self.dictionary = [self.presenter getDictionary];
+		[tableView reloadData];
+	}
+}
+
 #pragma ViewProtocol
 
 /**

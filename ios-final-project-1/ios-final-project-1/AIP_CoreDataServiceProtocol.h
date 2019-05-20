@@ -44,6 +44,13 @@
  */
 - (NSArray<AIP_WordModel *> *)clearAllWords;
 
+/**
+ Найти и удалить слово
+ 
+ @param text слово для удаления
+ */
+- (void) deleteWordWithText:(NSString *)text;
+
 @end
 
 #endif /* CoreDataServiceProtocol_h */

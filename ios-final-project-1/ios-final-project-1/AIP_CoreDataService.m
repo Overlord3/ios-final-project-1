@@ -133,6 +133,31 @@
 	return [self getAllWords];
 }
 
+/**
+ Найти и удалить слово
+ 
+ @param text слово для удаления
+ */
+- (void) deleteWordWithText:(NSString *)text
+{
+	NSManagedObjectContext *context = [self getCoreDataContext];
+	NSFetchRequest *request = [self getFetchRequest:text];
+	
+	NSError *error = nil;
+	NSArray *result = [context executeFetchRequest:request error:&error];
+	if (result.count != 1)
+	{
+		return;
+	}
+	AIP_Word *word = result[0];
+	[context deleteObject:word];
+	//Сохранение
+	if (![context save:&error])
+	{
+		NSLog(@"Не удалось удалить объекты");
+		NSLog(@"%@, %@", error, error.localizedDescription);
+	}
+}
 
 #pragma Вспомогательные методы
 

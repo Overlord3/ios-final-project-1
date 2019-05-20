@@ -36,6 +36,19 @@
  */
 - (void)selectedTableCellWithWord:(AIP_WordModel *)wordModel;
 
+/**
+ Отправить сообщение о том, что выбрана ячейка со словом для перехода к этому слову
+ 
+ @param wordModel слово, которое в выбранной ячейке
+ */
+
+/**
+ Удалить слово по тексту
+ 
+ @param text текст слова
+ */
+- (void)deleteWordWithText:(NSString *)text;
+
 @end
 
 #endif /* DictionaryPresenterProtocol_h */
