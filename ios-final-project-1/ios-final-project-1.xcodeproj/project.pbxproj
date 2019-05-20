@@ -20,6 +20,7 @@
 		FAC416E2227C9658006F4110 /* AIP_WordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416E1227C9658006F4110 /* AIP_WordModel.m */; };
 		FAC416E5227CB7F2006F4110 /* AIP_NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC416E4227CB7F2006F4110 /* AIP_NotificationService.m */; };
 		FAD1D1AC22919C4A002A50E3 /* CoreDataService_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD1D1AB22919C4A002A50E3 /* CoreDataService_Tests.m */; };
+		FAD1D1AE2292F475002A50E3 /* NetworkService_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD1D1AD2292F475002A50E3 /* NetworkService_Tests.m */; };
 		FAD5048F2285C75600B908A7 /* AIP_SearchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD5048E2285C75600B908A7 /* AIP_SearchPresenter.m */; };
 		FAD504962285CD0B00B908A7 /* AIP_Assembly.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD504952285CD0B00B908A7 /* AIP_Assembly.m */; };
 		FAD504D3228BD07E00B908A7 /* AIP_DictionaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD504D2228BD07E00B908A7 /* AIP_DictionaryViewController.m */; };
@@ -78,6 +79,7 @@
 		FAC416E3227CB7F2006F4110 /* AIP_NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_NotificationService.h; sourceTree = "<group>"; };
 		FAC416E4227CB7F2006F4110 /* AIP_NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIP_NotificationService.m; sourceTree = "<group>"; };
 		FAD1D1AB22919C4A002A50E3 /* CoreDataService_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataService_Tests.m; sourceTree = "<group>"; };
+		FAD1D1AD2292F475002A50E3 /* NetworkService_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkService_Tests.m; sourceTree = "<group>"; };
 		FAD5048D2285C75600B908A7 /* AIP_SearchPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_SearchPresenter.h; sourceTree = "<group>"; };
 		FAD5048E2285C75600B908A7 /* AIP_SearchPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIP_SearchPresenter.m; sourceTree = "<group>"; };
 		FAD504902285C7ED00B908A7 /* AIP_SearchPresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AIP_SearchPresenterProtocol.h; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				FAC416BB227C7EB8006F4110 /* ios_final_project_1Tests.m */,
 				FAD1D1AB22919C4A002A50E3 /* CoreDataService_Tests.m */,
+				FAD1D1AD2292F475002A50E3 /* NetworkService_Tests.m */,
 				FAC416BD227C7EB8006F4110 /* Info.plist */,
 			);
 			path = "ios-final-project-1Tests";
@@ -513,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD1D1AE2292F475002A50E3 /* NetworkService_Tests.m in Sources */,
 				FAD1D1AC22919C4A002A50E3 /* CoreDataService_Tests.m in Sources */,
 				FAC416BC227C7EB8006F4110 /* ios_final_project_1Tests.m in Sources */,
 			);
