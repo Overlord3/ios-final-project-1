@@ -58,11 +58,11 @@
 	self.tableView.dataSource = self;
 	self.tableView.delegate = self;
 	self.tableView.allowsSelection = NO;
-	
-	[self.view addSubview:self.tableView];
-	
 	self.tableView.separatorColor = UIColor.blackColor;
 	self.tableView.separatorInset = UIEdgeInsetsZero;
+	self.tableView.tableFooterView = [UIView new];
+	
+	[self.view addSubview:self.tableView];
 }
 
 

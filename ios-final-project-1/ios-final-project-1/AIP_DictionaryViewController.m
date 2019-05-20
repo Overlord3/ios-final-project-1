@@ -67,6 +67,14 @@
 - (void)showActionSheetForClearAction
 {
 	UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"Очистка словаря" message:@"Вы уверены, что хотите удалить все данные?" preferredStyle:UIAlertControllerStyleActionSheet];
+	//Строки с атрибутами
+	NSMutableAttributedString *actionSheetTitle = [[NSMutableAttributedString alloc] initWithString:@"Очистка словаря"];
+	[actionSheetTitle addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:17 weight:UIFontWeightMedium] range: NSMakeRange(0, actionSheetTitle.length)];
+	[actionSheet setValue:actionSheetTitle forKey:@"attributedTitle"];
+	
+	NSMutableAttributedString *actionSheetMessage = [[NSMutableAttributedString alloc] initWithString:@"Вы уверены, что хотите удалить все данные?"];
+	[actionSheetMessage addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16 weight:UIFontWeightRegular] range: NSMakeRange(0, actionSheetMessage.length)];
+	[actionSheet setValue:actionSheetMessage forKey:@"attributedMessage"];
 	
 	[actionSheet addAction:[UIAlertAction actionWithTitle:@"Очистить" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action)
 	{
@@ -131,6 +139,11 @@
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	return YES;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return @"Удалить";
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
