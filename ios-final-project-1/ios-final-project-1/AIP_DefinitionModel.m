@@ -53,15 +53,16 @@
 
 /**
  Метод, для получения текста определения для лейбла
- 
+
+ @param number номер определения, входит в текст
  @return текст определения
  */
-- (NSString *)getDefinitionForLabel
+- (NSString *)getDefinitionForLabel:(NSInteger)number
 {
 	NSString *definitionText = nil;
 	if (self.definition != nil)
 	{
-		definitionText = [@"Определение:\n" stringByAppendingString:self.definition];
+		definitionText = [NSString stringWithFormat:@"№%lu\n%@",number,self.definition];
 	}
 	return definitionText;
 }

@@ -33,7 +33,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
-	self.title = @"Словарь слов";
+	self.title = @"Словарь";
 	self.dictionary = [self.presenter getDictionary];
 	[self.tableView reloadData];
 }

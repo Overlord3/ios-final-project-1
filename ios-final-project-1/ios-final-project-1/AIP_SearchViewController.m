@@ -33,9 +33,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
-	self.title = @"Поиск определений слов";
+	self.title = @"Поиск";
 }
-
 
 /**
  Инициализация UI
@@ -61,6 +60,9 @@
 	self.tableView.allowsSelection = NO;
 	
 	[self.view addSubview:self.tableView];
+	
+	self.tableView.separatorColor = UIColor.blackColor;
+	self.tableView.separatorInset = UIEdgeInsetsZero;
 }
 
 
@@ -93,11 +95,18 @@
 	AIP_DefinitionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:AIP_DefinitionTableViewCell.description forIndexPath:indexPath];
 	
 	AIP_DefinitionModel *model = self.wordModel.definitions[indexPath.row];
-	cell.definitionLabel.text = [model getDefinitionForLabel];
+	cell.definitionLabel.text = [model getDefinitionForLabel:indexPath.row + 1];
 	cell.exampleLabel.text = [model getExampleForLabel];
 	cell.authorLabel.text = [model getAuthorForLabel];
 	cell.dateLabel.text = [model getDateForLabel];
-	
+	if (indexPath.row % 2 == 0)
+	{
+		cell.contentView.backgroundColor = UIColor.groupTableViewBackgroundColor;
+	}
+	else
+	{
+		cell.contentView.backgroundColor = UIColor.whiteColor;
+	}
 	return cell;
 }
 
@@ -108,7 +117,7 @@
 {
 	AIP_DefinitionModel *model = self.wordModel.definitions[indexPath.row];
 	CGFloat height = [AIP_DefinitionTableViewCell
-					  calculateHeightWithDefinition:[model getDefinitionForLabel]
+					  calculateHeightWithDefinition:[model getDefinitionForLabel:1]
 					  example:[model getExampleForLabel]
 					  author:[model getAuthorForLabel]
 					  date:[model getDateForLabel]];

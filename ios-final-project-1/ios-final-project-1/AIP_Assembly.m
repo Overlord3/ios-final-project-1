@@ -29,7 +29,7 @@
 {
 	UIViewController *searchViewController = [self assemblySearchScreen];
 	searchViewController.tabBarItem.image = [UIImage imageNamed:@"TabbarSearch"];
-	searchViewController.tabBarItem.title = @"Поиск определений слов";
+	searchViewController.tabBarItem.title = @"Поиск";
 	
 	UIViewController *dictionaryViewController = [self assemblyDictionaryScreen];
 	dictionaryViewController.tabBarItem.image = [UIImage imageNamed:@"TabbarDictionary"];

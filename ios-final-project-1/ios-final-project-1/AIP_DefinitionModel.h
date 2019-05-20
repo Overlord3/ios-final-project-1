@@ -60,9 +60,10 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Метод, для получения текста определения для лейбла
  
+ @param number номер определения, входит в текст
  @return текст определения
  */
-- (NSString *)getDefinitionForLabel;
+- (NSString *)getDefinitionForLabel:(NSInteger)number;
 
 /**
  Метод, для получения текста даты
